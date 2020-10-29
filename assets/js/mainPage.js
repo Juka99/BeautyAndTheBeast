@@ -117,7 +117,7 @@ function printPlans(data) {
 
                     <p>Cena plana<br><span>${el.cena}&euro;</span></p>
 
-                    <a href="#!" class='orderPlanButton' data-idPlana="${el.id}">Naruči Plan</a>
+                    <a href="plans.html" class='orderPlanButton' data-idPlana="${el.id}">Naruči Plan</a>
 
                 </div>
 
@@ -145,7 +145,7 @@ function printPlans(data) {
 
                     <p>Cena plana<br><span>${el.cena}&euro;</span></p>
 
-                    <a href="#!" class='orderPlanButton' data-idPlana="${el.id}">Naruči Plan</a>
+                    <a href="plans.html" class='orderPlanButton' data-idPlana="${el.id}">Naruči Plan</a>
 
                 </div>
 

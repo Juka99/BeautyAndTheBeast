@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Fa-fa icons -->
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
+
+    <!-- Font -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap" rel="stylesheet">
+
+    <!-- Icon -->
+
+    <link rel="icon" href="assets/images/milosLogo.png" />
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <title>Beauty And The Beast</title>
+
+</head>
+
+<body>
+
+    <!-- Go to top strelica -->
+
+    <a href="#!" class='goTop'>
+
+        <i class="fas fa-chevron-up"></i>
+
+    </a>
+
+    <!-- Youtube button -->
+
+    <a href="https://www.youtube.com/channel/UC-QIbqxqc3HUu2piUkplyyw" target="_blank" class='ytButton'><i
+            class="fab fa-youtube"></i></a>
+
+    <!-- Preload -->
+
+    <div class="preloader">
+
+        <video id='playMeNow' src="assets/videos/preloadVideoNew.mp4" autoplay muted
+            onloadedmetadata="this.muted = true" playsinline>
+
+            <!-- <source src="assets/videos/preloadVideoNew.mp4" type="video/mp4" /> -->
+            <!-- <source src="assets/videos/preloadVideo.ogg" type="video/ogg" />
+            <source src="assets/videos/preloadVideo.webm" type="video/webm" /> -->
+            <!-- Your browser does not support the video tag. -->
+
+        </video>
+
+        <script>
+            document.getElementById('playMeNow').play();
+        </script>
+
+    </div>
+
+    <!-- Login/Register -->
+
+    <div class="loginRegister">
+
+        <p><a href="login.html">Uloguj Se</a> / <a href="register.html">Registruj Se</a></p>
+
+    </div>
+
+    <!-- Main navigacija -->
+
+    <nav>
+
+        <div class="logoNav allLogos">
+
+        </div>
+
+        <div class="menuNav">
+
+            <ul class='menu mainMenu'>
+
+
+            </ul>
+
+        </div>
+
+    </nav>
+
+    <!-- Side navigacija trigger -->
+
+    <a href="#!" id='triggerSideNav'><i class="fa fa-bars" aria-hidden="true"></i></a>
+
+    <!-- Side navigacija -->
+
+    <div class="sideNav">
+
+        <ul class="menu sideMenu"></ul>
+
+        <div class="allLogos logoSideNav"></div>
+
+    </div>
+
+    <!-- Planovi template -->
+
+    <div class="planovi container-fluid">
+
+        <div class="row rowPlanovi">
+
+            <div class="formaPlanovi col-lg-12">
+
+                <div class="planKojiSeKupuje">
+
+                    <h3>Vi kupujete :</h3>
+
+                    <img src="assets/images/planIshrane.jpg" class='img-fluid' alt="Plan toga i toga" />
+
+                    <h4>Plan Ishrane</h4>
+
+                    <p>Cena : 35&euro;</p>
+
+                </div>
+
+                <input type="text" maxlength="3" placeholder="Vaša visina u cm ..." id='buyPlanVisina'
+                    class='buyPlanField' required="required" />
+
+                <p class='buyPlanErrorPar' id='buyPlanVisinaError'>Niste uneli visinu, ili ste je uneli u pogrešnom
+                    formatu. <br />Visina može da sadrži samo brojeve i ne može imati
+                    više od 3 cifre.</p>
+
+                <input type="text" maxlength="3" placeholder="Vaša težina u kg ..." id='buyPlanTezina'
+                    class='buyPlanField' required="required" />
+
+                <p class='buyPlanErrorPar' id='buyPlanTezinaError'>Niste uneli težinu ili ste je uneli u pogrešnom
+                    formatu. <br /> Težina može da sadrži samo brojeve i ne može imati
+                    više od 3 cifre.</p>
+
+                <input type="text" placeholder="Vaše godište ..." id='buyPlanGodiste' class='buyPlanField' maxlength="4"
+                    required="required" />
+
+                <p class='buyPlanErrorPar' id='buyPlanGodisteError'>Niste uneli godište ili ste ga uneli u pogrešnom
+                    formatu. <br /> Godište može da sadrži samo brojeve i mora da ima 4 cifre.</p>
+
+                <textarea class='buyPlanField' id="buyPlanAlergije"
+                    placeholder="Alergije na hranu, ako imate bilo koje ..." cols="30" rows="10"></textarea>
+
+                <textarea class='buyPlanField' id="buyPlanCilj" placeholder="Koji je cilj koji želite da postignete ?"
+                    cols="30" rows="10" required="required"></textarea>
+
+                <p class='buyPlanErrorPar' id='buyPlanCiljError'>Niste uneli ništa u polje za Vaš cilj.</p>
+
+                <textarea class='buyPlanField' id="buyPlanPovreda"
+                    placeholder="Da li imate bilo kakvu povredu za koju bi trebalo da znam ?" cols="30"
+                    rows="10"></textarea>
+
+                <select id="nacinPlacanjaPlana" class='buyPlanField'>
+
+                    <option value="0">Izaberite način plaćanja</option>
+                    <option value="1">Post Net</option>
+                    <option value="2">E-Banking</option>
+                    <option value="3">PayPal</option>
+
+                </select>
+
+                <p class='buyPlanErrorPar' id='buyPlanPlacanjeError'>Niste izabrali način plaćanja.</p>
+
+                <button id='buyPlanButton'>Kupi plan</button>
+
+                <div class="poslePopunjeneFormePlana">
+
+                    <p id='uspesnoKupljeno'>Čestitam, ostao je još samo jedan korak do vašeg plana !</p>
+
+                    <p id='napomenaZaUplatu'>Napomena : Vaš plan će Vam biti dostavljen par dana nakon sto izvršite
+                        uplatu,
+                        jer se svaki plan pravi specifično za Vas.</p>
+
+                    <p id='moratePoslatiSliku'>NAKON IZVRŠENE UPLATE, MORATE POSLATI SLIKU SA UPLATOM DA BI POTVRDILI
+                        PLAĆANJE ! <br /> Link ka stranici za slanje slike sa potvrdom uplate će Vam biti prikazan na
+                        vrhu
+                        svake stranice (ako ste na računaru) kada sledeći put uđete na sajt i takođe će Vam se
+                        prikazivati na sredini ekrana
+                        svaka 3 minuta (na bilo kom uređaju).
+                    </p>
+
+                    <div class="postNetUplata">
+
+                        <h3>Podaci za PostNet uplatnicu</h3>
+
+                        <p>Ima i prezime primaoca : <br />Miloš Premčeski</p>
+
+                        <p>Telefon : <br /> 0601733416</p>
+
+                    </div>
+
+                    <div class="eBankingUplata">
+
+                        <h3>Podaci za e-banking uplatu</h3>
+
+                        <div class="eBankingSlikaDiv">
+
+                            <img src="assets/images/racunZaEbanking.jpg" class='img-fluid' alt="E-Banking račun" />
+
+                        </div>
+
+                    </div>
+
+                    <div class="paypalUplata">
+
+                        <h3>Uplatu Paypalom možete izvršiti klikom na dugme ispod.</h3>
+
+                        <button id='payPalDugme'>PayPal</button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+
+    <footer class='container-fluid'>
+
+        <div class="row rowFooter">
+
+            <div class="col-lg-4 colSocialsFooter">
+
+                <div class="socialsFooter">
+
+                    <p>Pratite me :</p>
+
+                    <div class="socialsIcons">
+
+                        <a href="https://www.instagram.com/milos_premcevic/" id='igIcon' target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+
+                        <a href="https://www.youtube.com/channel/UC-QIbqxqc3HUu2piUkplyyw" target="_blank"><i
+                                class="fab fa-youtube"></i></a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4 colSocialsNav">
+
+                <p>Navigacija</p>
+
+                <div class="footerNav">
+
+                    <ul class='menu footerMenu'>
+
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4 colLogoFooter">
+
+                <div class="logoFooter">
+
+                    <div class="allLogos">
+
+                    </div>
+
+                    <p>Copyright &copy; 2020 Beauty And The Beast. <br />All rights reserved.</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- jQuery -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+    <!-- Bootstrap -->
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- JS fajlovi -->
+
+    <script src="assets/js/nav.js"></script>
+    <script src="assets/js/preloader.js"></script>
+    <script src="assets/js/plansBuy.js"></script>
+
+</body>
+
+</html>

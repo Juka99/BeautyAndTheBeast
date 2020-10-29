@@ -781,7 +781,6 @@ html body .plans h2 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
-  padding-bottom: 8%;
 }
 
 @media (max-width: 386px) {
@@ -790,11 +789,28 @@ html body .plans h2 {
   }
 }
 
+html body .plans h2 span {
+  color: whitesmoke;
+}
+
 html body .plans h2 label {
   font-size: 1em;
   color: #006378;
   border-bottom: 3px solid tomato;
   padding-bottom: .5%;
+}
+
+html body .plans p {
+  color: whitesmoke;
+  text-align: center;
+  padding: 1% 0% 8% 0%;
+  font-size: 1.3em;
+}
+
+@media (max-width: 386px) {
+  html body .plans p {
+    padding: 1% 3% 8% 3%;
+  }
 }
 
 html body .plans .plansCont .rowPlans {
@@ -2690,6 +2706,352 @@ html body .loginRegisterBlock .buttonLoginRegister:hover {
   color: tomato;
   background-color: whitesmoke;
   border-color: whitesmoke;
+}
+
+html body .planovi {
+  width: 100%;
+  font-family: "Work Sans", sans-serif;
+  padding: 20% 0% 15% 0%;
+  background-color: #191919;
+}
+
+@media (max-width: 480px) {
+  html body .planovi {
+    padding-top: 35%;
+  }
+}
+
+html body .planovi .rowPlanovi {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+html body .planovi .rowPlanovi .formaPlanovi {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+html body .planovi .rowPlanovi .formaPlanovi .buyPlanField {
+  width: 80%;
+  resize: none;
+  border-radius: 7px;
+  border: 2px solid tomato;
+  color: whitesmoke;
+  padding: 1.5%;
+  background-color: transparent;
+  margin: 2% 0%;
+}
+
+@media (max-width: 576px) {
+  html body .planovi .rowPlanovi .formaPlanovi .buyPlanField {
+    width: 90%;
+    margin: 4% 0%;
+  }
+}
+
+@media (max-width: 386px) {
+  html body .planovi .rowPlanovi .formaPlanovi .buyPlanField {
+    width: 95%;
+  }
+}
+
+html body .planovi .rowPlanovi .formaPlanovi .buyPlanField option {
+  background-color: #141414;
+}
+
+html body .planovi .rowPlanovi .formaPlanovi .buyPlanField::-webkit-input-placeholder {
+  color: whitesmoke;
+}
+
+html body .planovi .rowPlanovi .formaPlanovi .buyPlanField:-ms-input-placeholder {
+  color: whitesmoke;
+}
+
+html body .planovi .rowPlanovi .formaPlanovi .buyPlanField::-ms-input-placeholder {
+  color: whitesmoke;
+}
+
+html body .planovi .rowPlanovi .formaPlanovi .buyPlanField::placeholder {
+  color: whitesmoke;
+}
+
+html body .planovi .rowPlanovi .formaPlanovi .buyPlanErrorPar {
+  color: tomato;
+  letter-spacing: 1.4px;
+  padding: 2% 4%;
+  font-size: 1.1em;
+  display: none;
+}
+
+html body .planovi .rowPlanovi .formaPlanovi #buyPlanButton {
+  width: 40%;
+  line-height: 3em;
+  background-color: tomato;
+  color: whitesmoke;
+  border: none;
+  border-radius: 6px;
+  -webkit-transition: .6s;
+  transition: .6s;
+  margin: 4% 0%;
+}
+
+@media (max-width: 768px) {
+  html body .planovi .rowPlanovi .formaPlanovi #buyPlanButton {
+    width: 55%;
+  }
+}
+
+@media (max-width: 576px) {
+  html body .planovi .rowPlanovi .formaPlanovi #buyPlanButton {
+    margin-top: 7%;
+  }
+}
+
+@media (max-width: 480px) {
+  html body .planovi .rowPlanovi .formaPlanovi #buyPlanButton {
+    width: 70%;
+  }
+}
+
+@media (max-width: 386px) {
+  html body .planovi .rowPlanovi .formaPlanovi #buyPlanButton {
+    width: 80%;
+    margin: 10% 0%;
+  }
+}
+
+html body .planovi .rowPlanovi .formaPlanovi #buyPlanButton:hover {
+  color: tomato;
+  background-color: whitesmoke;
+}
+
+html body .planovi .rowPlanovi .formaPlanovi .poslePopunjeneFormePlana {
+  padding: 3%;
+  text-align: center;
+  display: none;
+}
+
+html body .planovi .rowPlanovi .formaPlanovi .poslePopunjeneFormePlana p {
+  font-size: 1.1em;
+  padding: 2% 0%;
+}
+
+html body .planovi .rowPlanovi .formaPlanovi .poslePopunjeneFormePlana #uspesnoKupljeno {
+  color: #46d846;
+  font-size: 1.4em;
+}
+
+html body .planovi .rowPlanovi .formaPlanovi .poslePopunjeneFormePlana #napomenaZaUplatu {
+  text-transform: uppercase;
+  color: whitesmoke;
+}
+
+html body .planovi .rowPlanovi .formaPlanovi .poslePopunjeneFormePlana #moratePoslatiSliku {
+  color: tomato;
+  text-shadow: 1.4px 1.4px black;
+  font-size: 1.3em;
+}
+
+html body .planovi .rowPlanovi .formaPlanovi .poslePopunjeneFormePlana .postNetUplata {
+  color: whitesmoke;
+  margin-top: 5%;
+  background-color: #2b2b2b;
+  padding: 5% 0%;
+  display: none;
+}
+
+html body .planovi .rowPlanovi .formaPlanovi .poslePopunjeneFormePlana .postNetUplata h3 {
+  padding-bottom: 2%;
+}
+
+html body .planovi .rowPlanovi .formaPlanovi .poslePopunjeneFormePlana .postNetUplata p {
+  padding: 1% 0%;
+  margin: 0px;
+  font-size: 1.2em;
+  letter-spacing: 2.2px;
+}
+
+@media (max-width: 480px) {
+  html body .planovi .rowPlanovi .formaPlanovi .poslePopunjeneFormePlana .postNetUplata p {
+    padding: 4% 0%;
+  }
+}
+
+html body .planovi .rowPlanovi .formaPlanovi .poslePopunjeneFormePlana .eBankingUplata {
+  color: whitesmoke;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 5%;
+  padding: 5% 0%;
+  background-color: #2b2b2b;
+  display: none;
+}
+
+html body .planovi .rowPlanovi .formaPlanovi .poslePopunjeneFormePlana .eBankingUplata h3 {
+  padding-bottom: 4%;
+}
+
+html body .planovi .rowPlanovi .formaPlanovi .poslePopunjeneFormePlana .eBankingUplata .eBankingSlikaDiv {
+  width: 40%;
+  display: block;
+  margin: 0px auto !important;
+}
+
+@media (max-width: 992px) {
+  html body .planovi .rowPlanovi .formaPlanovi .poslePopunjeneFormePlana .eBankingUplata .eBankingSlikaDiv {
+    width: 55%;
+  }
+}
+
+@media (max-width: 768px) {
+  html body .planovi .rowPlanovi .formaPlanovi .poslePopunjeneFormePlana .eBankingUplata .eBankingSlikaDiv {
+    width: 70%;
+  }
+}
+
+@media (max-width: 386px) {
+  html body .planovi .rowPlanovi .formaPlanovi .poslePopunjeneFormePlana .eBankingUplata .eBankingSlikaDiv {
+    width: 90%;
+  }
+}
+
+html body .planovi .rowPlanovi .formaPlanovi .poslePopunjeneFormePlana .eBankingUplata .eBankingSlikaDiv img {
+  max-width: 100%;
+  height: auto;
+}
+
+html body .planovi .rowPlanovi .formaPlanovi .poslePopunjeneFormePlana .paypalUplata {
+  margin-top: 5%;
+  padding: 5% 0%;
+  background-color: #2b2b2b;
+  display: none;
+}
+
+html body .planovi .rowPlanovi .formaPlanovi .poslePopunjeneFormePlana .paypalUplata h3 {
+  color: whitesmoke;
+  padding-bottom: 4%;
+  letter-spacing: 2px;
+  font-size: 1.7em;
+}
+
+@media (max-width: 576px) {
+  html body .planovi .rowPlanovi .formaPlanovi .poslePopunjeneFormePlana .paypalUplata h3 {
+    font-size: 1.5em;
+  }
+}
+
+html body .planovi .rowPlanovi .formaPlanovi .poslePopunjeneFormePlana .paypalUplata #payPalDugme {
+  width: 40%;
+  line-height: 3em;
+}
+
+@media (max-width: 480px) {
+  html body .planovi .rowPlanovi .formaPlanovi .poslePopunjeneFormePlana .paypalUplata #payPalDugme {
+    width: 60%;
+    margin-top: 4%;
+  }
+}
+
+html body .planovi .rowPlanovi .planKojiSeKupuje {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 5%;
+}
+
+html body .planovi .rowPlanovi .planKojiSeKupuje h3 {
+  color: whitesmoke;
+  font-size: 2.5em;
+  padding-bottom: 3%;
+}
+
+@media (max-width: 768px) {
+  html body .planovi .rowPlanovi .planKojiSeKupuje h3 {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 386px) {
+  html body .planovi .rowPlanovi .planKojiSeKupuje h3 {
+    font-size: 1.6em;
+  }
+}
+
+html body .planovi .rowPlanovi .planKojiSeKupuje img {
+  width: 30%;
+}
+
+@media (max-width: 386px) {
+  html body .planovi .rowPlanovi .planKojiSeKupuje img {
+    width: 50%;
+  }
+}
+
+html body .planovi .rowPlanovi .planKojiSeKupuje h4 {
+  color: tomato;
+  padding-top: 1.5%;
+  font-size: 2.1em;
+}
+
+@media (max-width: 992px) {
+  html body .planovi .rowPlanovi .planKojiSeKupuje h4 {
+    font-size: 1.8em;
+  }
+}
+
+@media (max-width: 480px) {
+  html body .planovi .rowPlanovi .planKojiSeKupuje h4 {
+    padding-top: 4%;
+  }
+}
+
+@media (max-width: 386px) {
+  html body .planovi .rowPlanovi .planKojiSeKupuje h4 {
+    font-size: 1.5em;
+  }
+}
+
+html body .planovi .rowPlanovi .planKojiSeKupuje p {
+  color: whitesmoke;
+  font-size: 1.5em;
+  color: orange;
+}
+
+@media (max-width: 386px) {
+  html body .planovi .rowPlanovi .planKojiSeKupuje p {
+    font-size: 1.3em;
+  }
 }
 
 html .vert {
