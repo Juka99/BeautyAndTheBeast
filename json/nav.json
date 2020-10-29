@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "naziv": "Početna",
+        "putanja": "index.html#goTopMain"
+    },
+    {
+        "id": 2,
+        "naziv": "Klijenti",
+        "putanja": "clients.html"
+    },
+    {
+        "id": 3,
+        "naziv": "Planovi",
+        "putanja": "index.html#goTopPlans"
+    },
+    {
+        "id": 4,
+        "naziv": "Blogovi",
+        "putanja": "blogs.html"
+    },
+    {
+        "id": 5,
+        "naziv": "Kontakt",
+        "putanja": "index.html#goTopContact"
+    }
+]

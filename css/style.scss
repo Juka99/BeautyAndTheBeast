@@ -1,0 +1,3212 @@
+*{
+
+    padding: 0px;
+    margin : 0px;
+
+}
+
+// Rezolucije za responsive
+
+$d0: 1390px;
+$d1 : 1200px;
+$d2: 992px;
+$d3: 768px;
+$d4: 576px;
+$d5: 480px;
+$d6: 386px;
+
+// Mixini za resposnive
+
+@mixin d0 {
+    @media (max-width: #{$d0}){
+        @content;
+    }
+}
+
+@mixin d1 {
+    @media (max-width: #{$d1}){
+        @content;
+    }
+}
+
+@mixin d1 {
+    @media (max-width: #{$d1}){
+        @content;
+    }
+}
+
+
+@mixin d2 {
+    @media (max-width: #{$d2}){
+        @content;
+    }
+}
+
+@mixin d3 {
+    @media (max-width: #{$d3}){
+        @content;
+    }
+}
+
+@mixin d4 {
+    @media (max-width: #{$d4}){
+        @content;
+    }
+}
+
+@mixin d5 {
+    @media (max-width: #{$d5}){
+        @content;
+    }
+}
+
+@mixin d6 {
+    @media (max-width: #{$d6}){
+        @content;
+    }
+}
+
+// Promenljive za css
+
+$f : flex;
+$sa : space-around;
+$sb : space-between;
+$c : center;
+$co : column;
+$fw : wrap;
+$font : 'Work Sans', sans-serif;
+
+html,body
+{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
+.transition-fade{
+
+    opacity : 1;
+    transition : .5s;
+
+}
+
+html.is-animating .transition-fade{
+
+    opacity : 0;
+
+}
+
+html{
+
+    scroll-behavior: smooth;
+    width : 100%;
+    position: relative;
+
+    body{
+
+        width : 100%;
+        background-color: #141414;
+        overflow: hidden;
+        position: relative;
+
+        //  Login/Register div
+
+        .loginRegister{
+
+            position : absolute;
+            right : 1%;
+            top : .2%;
+            font-family : $font;
+            z-index: 1005;
+
+            p{
+
+                color : orange;
+
+                a{
+
+                    color : orange;
+                    font-size: 1.15em;
+                    letter-spacing: 1.2px;
+                    text-decoration: none;
+                    transition: .6s;
+
+                    &:hover{
+
+                        color : tomato;
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        // Go to top strelica
+
+        .goTop{
+
+            position: fixed;
+            z-index: 1004;
+            bottom : 4%;
+            right : 3%;
+            transform: translateY(200px);
+            transition: .6s;
+
+            @include d4{
+
+                bottom : 2%;
+
+            }
+
+            i{
+
+                color : tomato;
+                font-size : 2.4em;
+                transition: .6s;
+
+                &:hover{
+
+                    transform : translateY(-10px);
+                    color : lighten(tomato, 10%);
+
+                }
+
+            }
+
+        }
+
+        .goTop1{
+
+            transform: translateY(0px);
+
+        }
+
+        // Youtube button
+
+        .ytButton{
+
+            position: fixed;
+            right : 2%;
+            top: 6.5%;
+            z-index: 1000;
+            transition: .6s;
+
+            @include d1{
+
+                right : 1%;
+
+            }
+
+            @include d2{
+
+                right : 2%;
+
+            }
+
+            i{
+
+                font-size: 2.4em;
+                color : tomato;
+                transition: .5s;
+
+                @include d1{
+
+                    font-size : 2em;
+
+                }
+
+                @include d2{
+
+                    font-size : 2.4em;
+
+                }
+
+                &:hover{
+
+                    color : darken(tomato, 10%);
+
+                }
+
+            }
+
+        }
+
+        // Preloader
+
+        .preloader{
+
+            width: 100%;
+            height: 100vh;
+            position: fixed;
+            z-index: 1007 !important;
+            display: $f;
+            justify-content: $c;
+            align-items: $c;
+            display: $f;
+            justify-content: $c;
+            background-color: #151315;
+
+            video{
+
+                width : 100%;
+                z-index: 1005 !important;
+
+            }
+
+        }
+
+    // Navigacija
+
+        nav{
+
+            width : 100%;
+            position: fixed;
+            top: 0%;
+            display: $f;
+            justify-content: $sa;
+            align-items: $c;
+            background-color: transparent;
+            z-index: 999;
+            padding : 0.5% 0%;
+            transition : .6s;
+
+            @include d2{
+
+                display: none;
+
+            }
+
+            .logoNav{
+
+                width : 25%;
+                display: $f;
+                justify-content: flex-start;
+                align-items: $c;
+
+                .logoImage{
+
+                    img{
+
+                        width : 150px;
+                        max-width: 100%;
+                        height: auto;
+                        transition: .6s;
+                
+                    }
+
+                }
+
+            }
+
+            .menuNav{
+
+                width : 55%;
+
+                @include d1{
+
+                    width : 50%;
+
+                }
+
+                .mainMenu{
+
+                    display: $f;
+                    align-items: $c;
+                    margin : 0px;
+                    list-style-type: none;
+                    justify-content: $sa;
+
+                    @include d1{
+
+                        justify-content: $sb;
+
+                    }
+
+                    li{
+
+                        a{
+
+                            color : whitesmoke;
+                            text-decoration: none;
+                            font-size: 1.2em;
+                            position: relative;
+                            transition: .6s;
+                            letter-spacing: 2.5px;
+                            font-family: $font;
+
+                            @include d1{
+
+                                font-size: 1em;
+
+                            }
+
+                            &:hover{
+                                color: tomato;
+                            }
+
+                            &:before,&:after{
+                                height: 14px;
+                                width: 14px;
+                                position: absolute;
+                                content: '';
+                                transition: all 0.35s ease;
+                                opacity: 0;
+                            }
+        
+                            &:before{
+                                left: -15%;
+                                top: -15%;
+                                border-left: 3px solid tomato;
+                                border-top: 3px solid tomato;
+                                transform: translate(100%, 50%);
+                            }
+        
+                            &:after{
+                                right: -15%;
+                                bottom: -15%;
+                                border-right: 3px solid tomato;
+                                border-bottom: 3px solid tomato;
+                                transform: translate(-100%, -50%);
+                            }
+        
+                            &:hover:before,&:hover:after{
+                                transform: translate(0%, 0%);
+                                opacity: 1;
+                            }
+        
+                            &:hover{
+                                color: lighten(tomato,5%);
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        // Side nav trigger
+
+        #triggerSideNav{
+
+            position: fixed;
+            z-index: 1005;
+            top: 3%;
+            left: 5%;
+            font-size: 2em;
+            text-decoration: none;
+            transition: .2s;
+            display: none;
+
+            @include d2{
+
+                display : block;
+
+            }
+
+                &:hover{
+
+                    transform: translateY(10%);
+
+                }
+
+                &:hover > i{
+
+                    color : darken(tomato, 5%);
+
+                }
+
+            i{
+
+                color : tomato;
+                transition: .2s;
+
+            }
+
+        }
+
+        // Side nav
+
+        .sideNav{
+
+            position: fixed;
+            top: 0%;
+            bottom: 0%;
+            width : 100%;
+            background-color: #141414;
+            z-index: 1004;
+            display: $f;
+            flex-direction: $co;
+            justify-content: $sa;
+            align-items: $c;
+            transform: translateY(-3500px);
+            transition: 1.4s;
+            
+            .sideMenu{
+
+                list-style-type: none;
+                text-align: $c;
+
+                li{
+
+                    margin : 30px 0%;
+
+                    a{
+
+                        text-decoration: none;
+                        color : tomato;
+                        font-size: 1.3em;
+                        display: inline-block;
+                        overflow: hidden;
+                        position: relative;
+                        padding : 5% 0%;
+                        font-family: $font;
+                        letter-spacing: 3px;
+
+                        &:after {
+
+                            content:'';
+                            position: absolute;
+                            width: 100%;
+                            height: 5px;
+                            bottom: -5%;
+                            left: 0;
+                            background-color: tomato;
+                            transform: scaleX(0);
+                            transform-origin: bottom right;
+                            transition: transform 0.3s;
+
+                        }
+                    
+                        &:hover {
+
+                            &:after {
+
+                                transform-origin: bottom left;
+                                transform: scaleX(1);
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+            .logoSideNav{
+
+                a{
+
+                    display: $f;
+                    justify-content: $c;
+                    align-items: $c;
+
+                    img{
+
+                        max-width: 100%;
+                        height: auto;
+                        width : 45%;
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        .sideNav1{
+
+            transform: translateY(0px);
+
+        }
+
+        // Main
+
+        main{
+
+            width : 100%;
+            height: 100vh;
+            padding : 0px;
+            background-image: url('../images/backgroundNew.jpg');
+            background-repeat: no-repeat;
+            background-position: $c;
+            background-attachment: fixed;
+            background-size: cover;
+
+            .fader{
+
+                width : 100%;
+                height : 100%;
+                display: $f;
+                align-items: $c;
+                background-color: cyan;
+                justify-content: flex-start;
+                background-color: rgba(0, 0, 0, 0.7);
+
+                .infoMain{
+
+                    width : 100%;
+                    display: $f;
+                    flex-direction: $co;
+                    align-items: flex-start;
+                    justify-content: $c;
+                    text-align: $c;
+
+                    @include d2{
+
+                        align-items: $c;
+
+                    }
+
+                    .infoBlock{
+
+                        display: $f;
+                        flex-direction: $co;
+                        justify-content: $c;
+                        align-items: $c;
+
+                        img{
+
+                            width : 60%;
+                            opacity: 0;
+                            animation:showMe 2.6s;
+                            animation-delay: 1s;
+                            animation-fill-mode: forwards;
+
+                        }
+
+                        a{
+
+                            transition: 0.5s;
+                            border-radius: 12px;
+                            text-decoration: none;
+                            padding : 5%;
+                            margin-top: 7%;
+                            font-family: $font;
+                            background-color: tomato;
+                            color : whitesmoke;
+                            font-size : 1.1em;
+                            letter-spacing: 2px;
+                            opacity: 0;
+                            animation:showMe 2.2s;
+                            animation-delay: 2s;
+                            animation-fill-mode: forwards;
+
+
+                            &:hover,
+                            &:focus { 
+                                    border-color: transparent;
+                                    color: tomato;
+                                    box-shadow: inset 0 -4.50em 0 0 whitesmoke;
+                            } 
+
+                        }
+
+                    }
+    
+                }
+
+            }
+
+        }
+
+        // Ko sam ja sekcija
+
+        .specialSection{
+
+            width : 100%;
+            padding : 10% 0%;
+
+            .rowSpec{
+
+                display: $f;
+
+                .colKoSamJa1{
+
+                    display: $f;
+                    justify-content: $c;
+                    align-items: $c;
+                    position: relative;
+                    padding : 0px;
+
+                    @include d2{
+
+                        margin-bottom: 10%;
+
+                    }
+
+                    &::before{
+
+                        content : '';
+                        position: absolute;
+                        width : 4px;
+                        height : 100%;
+                        background: linear-gradient(308deg, #e85d46, #f24124, #f55238, #f3600c);
+                        background-size: 800% 800%;
+                        animation: gradientTomato 2s ease infinite;
+                        left : 6%;
+
+                    }
+
+                    
+                    .koSamJaInfo{
+
+                        width : 80%;
+                        font-family: $font;
+                        display: $f;
+                        flex-direction: $co;
+                        justify-content: $sa;
+                        align-items: $c;
+
+                        h2{
+
+                            color : whitesmoke;
+                            font-size: 2.7em;
+                            background: linear-gradient(308deg, #e85d46, #f24124, #f55238, #f3600c, #ca4033, tomato);
+                            background-size: 800% 800%;
+                            animation: gradientTomato 4s ease infinite;
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                            text-align: $c;
+
+                            @include d4{
+
+                                font-size : 2.3em;
+
+                            }
+
+                            @include d6{
+
+                                font-size : 1.9em;
+
+                            }
+
+                        }
+
+                        p{
+
+                            letter-spacing: 2.5px;
+                            color : whitesmoke;
+                            padding-top: 9%;
+                            line-height: 35px;
+                            text-align: justify;
+
+                            @include d2{
+
+                                padding-top : 5%;
+
+                            }
+
+                            @include d6{
+
+                                font-size : .9em;
+
+                            }
+
+                            @include d5{
+
+                                text-align : $c;
+
+                            }
+
+                        }
+
+                        #rezultatiKlijenata{
+
+                            margin: 7% auto;
+                            transition: .5s;
+                            border-radius: 6px;
+                            text-decoration: none;
+                            width : 50%;
+                            text-align: $c;
+                            background-color: transparent;
+                            border : 3px solid tomato;
+                            line-height: 4em;
+                            color : tomato;
+                            letter-spacing: 2.2px;
+
+                            @include d1{
+
+                                width : 65%;
+
+                            }
+
+                            @include d6{
+
+                                width : 85%;
+
+                            }
+
+
+                            &:hover,&:focus {
+
+                              box-shadow: 0 0.7em 0.7em -0.4em #eb5527;
+                              transform: translateY(-0.25em);
+                              color : whitesmoke;
+                              background-color: tomato;
+
+                            }
+
+                            
+
+                        }
+
+                    }
+
+                }
+
+                .colZastoBasJa1{
+
+                    display: $f;
+                    justify-content: $c;
+                    align-items: $c;
+                    
+                    #videoZastoBasJa{
+
+                        width : 90%;
+
+                    }
+
+                }
+
+                .colZastoBasJa2{
+
+                    padding : 0px;
+                    position: relative;
+
+                    &::before{
+
+                        display: none;
+
+                    }
+
+                    &::after{
+
+                        content : '';
+                        position: absolute;
+                        width : 4px;
+                        height : 100%;
+                        background: linear-gradient(308deg, #e85d46, #f24124, #f55238, #f3600c);
+                        background-size: 800% 800%;
+                        animation: gradientTomato 2s ease infinite;
+                        right : 6% !important;
+
+                    }
+
+                }
+
+                .colKoSamJa2{
+
+                    display: $f;
+                    justify-content: $c;
+                    padding : 0px;
+
+                    .koSamJaSlika{
+
+                        width : 80%;
+
+                        @include d2{
+
+                            width : 70%;
+
+                        }
+
+                        img{
+                            
+                            max-width: 100%;
+                            height: auto;
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        .zastoBasJa{
+
+            background-color: darken(#141414, .8%);
+
+            .rowZastoBasJa{
+
+                display : $f;
+
+                .colZastoBasJa1{
+
+                    @include d2{
+
+                        order : 2;
+
+                    }
+
+                }
+
+                .colZastoBasJa2{
+
+                    @include d2{
+
+                        order : 1;
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        // Planovi sekcija
+
+        .plans{
+
+            padding : 10% 0%;
+            font-family: $font;
+
+            h2{
+
+                color : whitesmoke;
+                font-size: 2.7em;
+                background: linear-gradient(308deg, #e85d46, #f24124, #f55238, #f3600c, #ca4033, tomato);
+                background-size: 800% 800%;
+                animation: gradientTomato 4s ease infinite;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                text-align: $c;
+
+                @include d6{
+
+                    font-size : 2.2em;
+
+                }
+
+                span{
+
+                    color : whitesmoke;
+
+                }
+                
+                label{
+
+                    font-size: 1em;
+                    color: #006378;
+                    border-bottom: 3px solid tomato;
+                    padding-bottom: .5%;
+
+                }
+
+            }
+
+            p{
+
+                color : whitesmoke;
+                text-align: $c;
+                padding : 1% 0% 8% 0%;
+                font-size : 1.3em;
+
+                @include d6{
+
+                    padding : 1% 3% 8% 3%;
+
+                }
+
+            }
+            
+            .plansCont{
+
+
+                .rowPlans{
+
+                    display: $f;
+                    justify-content: $c;
+
+
+                    .colPlanIshrane{
+
+                        display: $f;
+                        justify-content: $c;
+                        align-items: $c;
+
+                        &:last-child > .planBox{
+
+                            display : $f;
+                            flex-direction: $co;
+                            align-items: $sa;
+                            justify-content: flex-start;
+
+                        }
+
+                        &:last-child > .planBox > .planPictureHolder{
+
+                            position: absolute;
+                            top : 23%;
+                            right : -19% !important;
+
+                            @include d0{
+
+                                width : 55%;
+                                top : 25%;
+                                right : -14% !important;
+
+                            }
+
+                            @include d1{
+
+                                width : 50%;
+                                top : 30%;
+                                right : -14% !important;
+
+                            }
+
+                            @include d2{
+
+                                width : 40%;
+                                top : 20%;
+                                right : -4% !important;
+
+                            }
+
+                            @include d3{
+
+                                width : 45%;
+                                top : 25%;
+                                right : -8% !important;
+
+                            }
+
+                            @include d5{
+
+                                top : 30%;
+
+                            }
+
+                            @include d6{
+
+                                top : 35%;
+                                width : 47%;
+
+                            }
+
+                        }
+
+                        &:first-child > .planBox > .planPictureHolder{
+
+                            left : -19%;
+                            top : 23%;
+
+                            @include d0{
+
+                                width : 55%;
+                                top : 25%;
+                                left : -14% !important;
+
+                            }
+
+                            @include d1{
+
+                                width : 50%;
+                                top : 30%;
+                                left : -14% !important;
+
+                            }
+
+                            @include d2{
+
+                                width : 40%;
+                                top : 20%;
+                                left : -4% !important;
+
+                            }
+
+                            @include d3{
+
+                                width : 45%;
+                                top : 25%;
+                                left : -8% !important;
+
+                            }
+
+                            @include d5{
+
+                                top : 30%;
+
+                            }
+
+                            @include d6{
+
+                                top : 35%;
+                                width : 47%;
+
+                            }
+
+                        }
+
+
+                        .planBox{
+
+                            width : 90%;
+                            display: $f;
+                            background-color: lighten(#141414, 5%);
+                            position: relative;
+                            justify-content: flex-end;
+                            height : 400px;
+                            border-radius : 12px;
+                            border : 2px solid tomato;
+                            padding : 15% 0%;
+                            box-shadow: none;
+                            transition: .5s;
+
+                            @include d2{
+
+                                margin : 7% 0%;
+
+                            }
+
+                            @include d3{
+
+                                margin : 9% 0%;
+
+                            }
+
+                            &:hover{
+
+                                box-shadow: -1px 2px 36px 13px tomato;
+                                transform : scale(1.05);
+
+                            }
+
+                            &:hover > .planPictureHolder > img{
+
+                                transform : scale(1.05)
+
+                            }
+
+
+                            .planPictureHolder{
+
+                                position: absolute;
+                                width : 60%;
+                                overflow: hidden;
+                                border : 3px solid tomato;
+                                border-radius: 12px;
+
+                                img{
+
+                                    width : 100%;
+                                    max-width: 100%;
+                                    height: auto;
+                                    border-radius: 12px;
+                                    transition: .5s;
+                                    overflow: hidden;
+
+                                }
+
+                            }
+
+                            .aboutPlan{
+
+                                width : 50%;
+                                height : 100%;
+                                display: $f;
+                                flex-direction: $co;
+                                justify-content: $sb;
+                                align-items: $c;
+                                font-family: $font;
+
+                                @include d0{
+
+                                    width : 60%;
+
+                                }
+
+                                h3{
+
+                                    color : tomato;
+                                    font-size : 1.9em;
+                                    text-align: $c;
+                                    letter-spacing: 2px;
+
+                                    @include d1{
+
+                                        font-size: 1.9em;
+
+                                    }
+
+                                    @include d6{
+
+                                        font-size : 1.6em;
+
+                                    }
+
+                                }
+
+                                p{
+
+                                    color : #eea24c;
+                                    letter-spacing: 2px;
+                                    line-height: 1.7em;
+                                    text-align: $c;
+                                    font-size: 1.2em;
+
+                                    span{
+
+                                        font-size : 1.3em;
+
+                                    }
+
+                                }
+
+                                .orderPlanButton{
+
+                                    width : 87%;
+                                    text-align: $c;
+                                    color : whitesmoke;
+                                    line-height: 3em;
+                                    background-color: tomato;
+                                    border : 3px solid tomato;
+                                    text-decoration: none;
+                                    border-radius : 6px;
+                                    letter-spacing: 2px;
+                                    transition: .5s;
+
+                                    &:hover,
+                                    &:focus {
+                                        box-shadow: inset 0 0 0 2em whitesmoke;
+                                        color : tomato;
+                                        background-color: whitesmoke;
+                                        border : 3px solid whitesmoke;
+                                    }
+
+                                }
+                                
+                            }
+
+                        }
+
+                    }
+
+                    .colSpecialPlan{
+
+                        display : $f;
+                        flex-direction: $co;
+                        border-radius: 12px;
+                        padding : 5% 0%;
+                        transition: .5s;
+                        background: linear-gradient(8deg, #e85d46, #f24124, #f55238, #f3600c, orangered, tomato, red);
+                        background-size: 800% 800%;
+                        animation: gradientTomato 2s ease infinite;
+
+                        @include d4{
+
+                            padding : 10% 0%;
+
+                        }
+
+                        &:hover{
+
+                            transform : scale(1.05);
+                            box-shadow: -1px 2px 36px 13px #f06b1d;
+
+                        }
+
+                        h3{
+
+                            color : whitesmoke;
+                            font-size: 2em;
+                            padding-bottom : 10%;
+                            letter-spacing: 2px;
+
+                            @include d4{
+
+                                padding-bottom: 3%;
+
+                            }
+
+                        }
+
+                        .planIshraneITreninga{
+
+                            display: $f;
+                            flex-direction: $co;
+                            align-items: $c;
+                            justify-content: flex-start;
+                            box-shadow: none;
+
+                            &:hover{
+
+                                box-shadow: none;
+                                transform : scale(1);
+
+                            }
+
+                        }
+
+                    }
+
+                    .colPlanTreninga{
+
+
+                        .planTreninga{
+
+                            display : $f;
+                            flex-direction: $co;
+                            align-items: $sa;
+                            justify-content: flex-start;
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        // Kontakt sekcija
+
+        .contactMe{
+
+            background-color: darken(#141414, .8%);
+            display: $f;
+            flex-direction: $co;
+            justify-content: $c;
+            align-items: $c;
+            font-family: $font;
+            padding : 10% 0%;
+
+            h2{
+
+                color : whitesmoke;
+                font-size: 2.7em;
+                background: linear-gradient(308deg, #e85d46, #f24124, #f55238, #f3600c, #ca4033, tomato);
+                background-size: 800% 800%;
+                animation: gradientTomato 4s ease infinite;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                text-align: $c;
+                padding-bottom: 8%;
+
+                @include d4{
+
+                    font-size : 2.3em;
+
+                }
+
+                @include d3{
+
+                    padding-bottom : 13%;
+
+                }
+                
+                label{
+
+                    font-size: 1em;
+                    color: #006378;
+                    border-bottom: 3px solid tomato;
+                    padding-bottom: 4.5%;
+
+                }
+
+            }
+
+            .contactMeContainer{
+
+                //background-color: cyan;
+                display: $f;
+                flex-direction: $co;
+                justify-content: $c;
+                align-items: $c;
+                text-align: $c;
+                font-family: $font;
+
+                
+                .topPartContact{
+
+                    display: $f;
+                    flex-direction: $co;
+                    justify-content: $c;
+                    align-items: $c;
+
+                    p{
+
+                        color : tomato;
+                        font-size : 1.5em;
+
+                        @include d5{
+
+                            padding-bottom : 5%;
+
+                        }
+
+                    }
+
+                    .instagramInfo{
+
+
+                        p{
+
+
+                            #igName{
+
+                                text-decoration : none;
+                                color : orange;
+                                transition: .6s;
+
+                                &:hover{
+
+                                    color : rgb(255, 214, 137);
+
+                                }
+
+                            }
+
+                            #igIcon{
+
+                                text-decoration : none;
+                                transition: .6s;
+                                width : auto;
+
+                                i{
+
+                                    color : #c800c8;
+                                    font-size : 1.4em;
+                                    vertical-align: middle;
+                                    transition: .6s;
+
+                                    &:hover{
+
+                                        color : lighten(#ee73ee, 7%);
+
+                                    }
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+                #midPartContact{
+
+                    color : whitesmoke;
+                    font-size : 2em;
+                    letter-spacing: 2px;
+                    padding : 1% 0%;
+
+                    @include d2{
+
+                        padding : 3% 0%;
+
+                    }
+
+                    @include d5{
+
+                        padding : 1% 0% 3% 0%;
+
+                    }
+
+                }
+
+                .bottomPartContact{
+
+                    width : 100%;
+                    display: $f;
+                    flex-direction: $co;
+                    justify-content: $c;
+                    align-items: $c;
+
+                    p{
+
+                        color : #fbb023;
+                        font-size : 2em;
+                        padding-bottom: 2.5%;
+
+                        @include d4{
+
+                            padding-bottom : 7%;
+
+                        }
+
+                    }
+
+                    .contactFormErrorPar{
+
+                        color : tomato;
+                        text-align: $c;
+                        font-size: 1.3em;
+                        padding-top: 2%;
+                        letter-spacing: 1.2px;
+                        line-height: 1.8em;
+                        display : none;
+
+                        @include d5{
+
+                            font-size : 1.1em;
+
+                        }
+
+                    }
+
+                    .formField{
+
+                        width : 40%;
+                        background-color: transparent;
+                        border : 2px solid tomato;
+                        color : tomato;
+                        border-radius: 6px;
+                        resize: none;
+                        padding : 1%;
+                        margin : .5% 0%;
+
+                        @include d2{
+
+                            width : 70%;
+
+                        }
+
+                        @include d5{
+
+                            width : 85%;
+                            padding : 2%;
+
+                        }
+
+                        &::placeholder{
+
+                            color : whitesmoke;
+
+                        }
+
+                    }
+
+                    #posaljiPitanje{
+
+                        background-color: tomato;
+                        border-radius: 6px;
+                        border : 2px solid tomato;
+                        color : whitesmoke;
+                        width : 20%;
+                        line-height: 3.4em;
+                        outline: none;
+                        letter-spacing: 1.5px;
+                        transition: .6s;
+
+                        @include d2{
+
+                            width : 35%;
+
+                        }
+
+                        @include d3{
+
+                            width : 45%;
+
+                        }
+
+                        @include d5{
+
+                            width : 60%;
+
+                        }
+
+                        @include d6{
+
+                            width : 70%;
+
+                        }
+
+                        &:hover, 
+                        &:focus {
+
+                        animation: pulse 1s;
+                        box-shadow: 0 0 0 2em rgba(#fff,0);
+                        background-color: lighten(tomato, 5%);
+                        border : 2px solid lighten(tomato, 5%);
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        footer{
+
+            background-color: #141414;
+            padding : 10% 0%;
+            font-family: $font;
+
+            .rowFooter{
+
+                display: $f;
+
+                .colSocialsFooter{
+
+                    display: $f;
+                    justify-content: $c;
+                    align-items: $c;
+
+                    @include d2{
+
+                        order : 2;
+                        margin : 7% 0%;
+
+                    }
+
+                    @include d5{
+
+                        margin : 10% 0%;
+
+                    }
+
+                    .socialsFooter{
+
+
+                        p{
+
+                            color : orange;
+                            font-size : 1.7em;
+                            letter-spacing: 1.7px;
+
+                        }
+
+                        .socialsIcons{
+
+                            width : 100%;
+                            display: $f;
+                            justify-content: $sa;
+                            align-items: $c;
+
+                            a{
+
+                                text-decoration: none;
+
+                                &:first-child{
+
+                                    color : #b329b3;
+                                    transition: .3s;
+
+                                    &:hover{
+
+                                        color : lighten(#b329b3, 15%);
+
+                                    }
+
+                                }
+
+                                &:last-child{
+
+                                    color : tomato;
+                                    transition: .3s;
+
+                                    &:hover{
+
+                                        color : darken(tomato, 15%);
+
+                                    }
+
+                                }
+
+                                i{
+
+                                    font-size : 1.9em;
+                                    transition: .3s;
+
+                                    @include d2{
+
+                                        font-size : 2.2em;
+
+                                    }
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+                .colSocialsNav{
+
+                    display: $f;
+                    flex-direction: $co;
+                    justify-content: $c;
+                    align-items: $c;
+
+                    @include d2{
+
+                        order : 1;
+
+                    }
+
+                    p{
+
+                        color : tomato;
+                        font-size : 1.7em;
+                        letter-spacing: 1.8px;
+
+                    }
+
+                    .footerNav{
+
+                        
+                        ul{
+
+                            text-align: $c;
+                            list-style-type: none;
+
+                            li{
+
+                                margin : 10px 0px;
+
+                                @include d2{
+
+                                    margin : 15px 0px;
+
+                                }
+
+                                a{
+
+                                    color : whitesmoke;
+                                    letter-spacing: 2px;
+                                    font-size : 1.4em;
+                                    text-decoration: none;
+                                    transition: .6s;
+
+                                    @include d5{
+
+                                        font-size : 1.1em;
+
+                                    }
+
+                                    &:hover{
+
+                                        color : orangered;
+
+                                    }
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+                .colLogoFooter{
+
+                    display: $f;
+                    justify-content: $c;
+                    align-items: $c;
+                    
+                    @include d2{
+
+                        order : 3;
+
+                    }
+
+                    .logoFooter{
+
+                        text-align: $c;
+                        display: $f;
+                        flex-direction: $co;
+                        justify-content: $c;
+                        align-items: $c;
+
+                        .allLogos{
+
+                            width : 40%;
+
+                            img{
+
+                                max-width: 100%;
+                                height: auto;
+
+                            }
+
+                        }
+
+                        p{
+
+                            color : whitesmoke;
+                            padding-top: 8%;
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        // Blogs.html
+
+        .blogovi{
+
+            padding: 20% 0% !important;
+            display: $f;
+            flex-wrap: $fw;
+            justify-content: $sa;
+            align-items: $c;
+            font-family : $font;
+            background-color: lighten(#141414, 1%);
+
+            @include d4{
+
+                padding : 30% 0% !important;
+
+            }
+
+            .blogBox{
+
+                width : 23%;
+                height : 400px;
+                position : relative;
+                background-image: url("../images/planTreninga.jpg");
+                background-position: $c;
+                background-repeat: no-repeat;
+                background-size: cover;
+                overflow: hidden;
+                transition: .6s;
+                box-shadow: none;
+                margin : 2% 0%;
+
+                @include d1{
+
+                    width : 26%;
+
+                }
+
+                @include d2{
+
+                    width : 35%;
+
+                }
+
+                @include d3{
+
+                    width : 40%;
+
+                }
+
+                @include d4{
+
+                    width : 80%;
+                    margin : 3% 0%;
+
+                }
+
+                @include d6{
+
+                    margin : 5% 0%;
+
+                }
+
+                &:hover{
+
+                    transform : scale(1.03);
+                    box-shadow: 10px 10px 5px 0px rgb(0, 0, 0);
+
+                }
+
+                &:hover > .blogCardInfo{
+
+                    bottom : -30%;
+                    background-color: lighten(#141414, 10%);
+
+                }
+                
+                .datumPostavljanjaBloga{
+
+                    position: absolute;
+                    left : 3%;
+                    top : 3%;
+
+                    p{
+
+                        color : whitesmoke;
+
+                    }
+
+                }
+
+                .blogCardInfo{
+
+                    position : absolute;
+                    height : 100%;
+                    bottom : -75%;
+                    padding : 4%;
+                    background-color: lighten(#141414, 5%);
+                    transition: .7s;
+
+                    #autorCardText{
+
+                        color : whitesmoke;
+
+                    }
+
+                    h3{
+
+                        color : orangered;
+                        padding-bottom: 5%;
+
+                    }
+
+                    #shortIntroCardText{
+
+                        color : whitesmoke;
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        .blogPage{
+
+            width : 100%;
+            padding : 0px;
+            position : relative;
+
+            .blogPicture{
+
+                width : 100%;
+                height: 70vh;
+                background-image: url('../images/blogBackground.jpeg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: $c;
+                background-attachment: fixed;
+
+                .blogPictureFade{
+
+                    width : 100%;
+                    height : 100%;
+
+                }
+
+            }
+
+            .absoluteBlogBox{
+
+                font-family : $font;
+                background-color: lighten(#141414, 3%);
+                width : 90%;
+                border-radius : 12px;
+                display: $f;
+                flex-direction: $co;
+                justify-content: $sa;
+                align-items: $c;
+                box-shadow: 10px 10px 5px 0px rgb(0, 0, 0);
+                padding : 3%;
+                transform: translateY(-5%);
+
+                @include d5{
+
+                    transform: translateY(-2%);
+
+                }
+
+                h1{
+
+                    color : orange;
+                    padding: 4% 0%;
+                    letter-spacing: 2px;
+                    text-align: $c;
+
+                    @include d3{
+
+                        padding : 8% 0%;
+
+                    }
+
+                    @include d4{
+
+                        padding : 12% 0%;
+
+                    }
+
+                }
+
+                p{
+
+                    color : whitesmoke;
+                    font-size : 1.2em;
+                    line-height: 40px;
+                    letter-spacing: 1.6px;
+                    text-align: justify;
+                    text-shadow : 1.2px 1.2px black;
+
+                    @include d3{
+
+                        font-size : 1.05em;
+                        letter-spacing: 2px;
+
+                    }
+
+                    @include d5{
+
+                        font-size : 1em;
+                        text-align: $c;
+    
+                    }
+
+                }
+
+            }
+
+        }
+
+        // Komentari za blogove
+
+        .commentSection{
+
+            width : 100%;
+            display: $f;
+            flex-direction: $co;
+            justify-content: $c;
+            align-items: $c;
+            background-color: lighten(#141414, 2%);
+            font-family: $font;
+            padding : 3% 0%;
+            text-align: $c;
+
+            @include d2{
+
+                padding : 6% 0%;
+
+            }
+
+            @include d4{
+
+                padding : 10% 0%;
+
+            }
+
+            h2{
+
+                background: linear-gradient(308deg, #e85d46, #f24124, #f55238, #f3600c, #ca4033, tomato);
+                background-size: 800% 800%;
+                animation: gradientTomato 4s ease infinite;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-size : 2.3em;
+
+                @include d2{
+
+                    padding-bottom: 5%;;
+
+                }
+
+            }
+
+            .postYourComment{
+
+                width : 70%;
+                background-color: lighten(#141414, 4%);
+                display: $f;
+                flex-direction: $co;
+                justify-content: $c;
+                align-items: $c;
+                margin : 3% 0%;
+                padding : 3.5% 0%;
+                border-radius: 9px;
+
+                @include d2{
+
+                    width : 90%;
+                    padding : 5% 0%;
+
+                }
+
+                @include d5{
+
+                    padding : 8% 0%;
+
+                }
+
+                textarea{
+
+                    resize : none;
+                    width : 70%;
+                    background-color: transparent;
+                    color : whitesmoke;
+                    padding : 1.5%;
+                    border-radius: 12px;
+                    border : 2px solid whitesmoke;
+
+                    @include d3{
+
+                        width : 85%;
+
+                    }
+
+                    @include d4{
+
+                        width : 90%;
+                        padding : 2%;
+
+                    }
+
+                    @include d6{
+
+                        width : 100%;
+
+                    }
+
+                    &::placeholder{
+
+                        color : whitesmoke;
+
+                    }
+
+                }
+
+                #commentErrorPar{
+
+                    color : tomato;
+                    padding-top: 5%;
+                    letter-spacing: 1.1px;
+                    font-size: 1.2em;
+                    display: none;
+
+                }
+
+                #postACommentButton{
+
+                    outline: none;
+                    margin-top : 5%;
+                    width : 30%;
+                    line-height: 3em;
+                    background-color: tomato;
+                    color : whitesmoke;
+                    border: none;
+                    border-radius: 6px;
+                    transition: .6s;
+
+                    @include d2{
+
+                        width : 40%;
+
+                    }
+
+                    @include d4{
+
+                        width : 60%;
+
+                    }
+
+                    @include d5{
+
+                        margin-top : 8%;
+
+                    }
+
+                    &:hover{
+
+                        color : tomato;
+                        background-color: whitesmoke;
+
+                    }
+
+                }
+
+            }
+
+            #nemaKomentara{
+
+                color : #f3b239;
+                letter-spacing: 1.2px;
+                font-size: 1.4em;
+
+                @include d3{
+
+                    padding : 5% 0%;
+
+                }
+
+            }
+
+            #ulogujSeZaKomentar{
+
+                color : #ffce48;
+                font-size : 1.4em;
+                letter-spacing: 1.2px;
+
+                @include d3{
+
+                    padding : 5% 0%;
+
+                }
+
+            }
+
+            .komentariIspis{
+
+                width : 80%;
+                display: $f;
+                flex-direction: $co;
+                align-items: $c;
+                justify-content: $c;
+                margin : 4% 0%;
+
+                @include d1{
+
+                    width : 90%;
+
+                }
+
+                @include d2{
+
+                    width : 100%;
+
+                }
+
+                .commentBox{
+
+                    width : 80%;
+                    background-color: lighten(#141414, 4%);
+                    padding : 3%;
+                    display: $f;
+                    flex-direction: $co;
+                    justify-content: $sa;
+                    align-items: $c;
+                    margin : 2.5% 0%;
+                    border-radius: 12px;
+                    transform: translateX(0px);
+
+                    @include d2{
+
+                        padding : 5% 3%;
+                        width : 85%;
+
+                    }
+
+                    @include d4{
+
+                        width : 95%;
+
+                    }
+
+                    @include d5{
+
+                        padding : 9% 3%;
+
+                    }
+
+                    .topCommentPart{
+
+                        width : 100%;
+                        display: $f;
+                        justify-content: $sb;
+                        align-items: $c;
+
+                        @include d3{
+
+                            flex-direction: $co;
+
+                        }
+
+                        p{
+
+                            margin-bottom: 0px;
+                            color : tomato;
+                            font-size: 1.1em;
+                            letter-spacing: 1.2px;
+
+                        }
+
+                    }
+
+                    .middleCommentPart{
+
+                        margin : 5% 0%;
+                        letter-spacing: 1.2px;
+                        color : whitesmoke;
+                        text-shadow : 1.3px 1.3px #000;
+                        line-height: 36px;
+
+                        @include d4{
+
+                            margin : 7% 0%;
+
+                        }
+
+                    }
+
+                    .botCommentPart{
+
+                        margin-bottom : 3%;
+                        width : 100%;
+
+                        #odgovorNaKomentar{
+
+                            width : 35%;
+                            line-height: 3.2em;
+                            background-color: tomato;
+                            border : none;
+                            border-radius: 6px;
+                            color : whitesmoke;
+                            transition: .6s;
+                            outline: none;
+
+                            @include d2{
+
+                                width : 50%;
+
+                            }
+
+                            @include d5{
+
+                                width : 70%;
+
+                            }
+
+                            &:hover{
+
+                                background-color: whitesmoke;
+                                color : tomato;
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+                .commentBoxAnswer{
+
+                    transform: translateX(30px);
+
+                }
+
+            }
+
+        }
+
+        // Odgovor na komentar
+
+        .blockAnswerComment{
+
+            position: fixed;
+            width : 70%;
+            background-color: lighten(#141414, 6%);
+            border-radius: 12px;
+            left : 15%;
+            height : 70%;
+            top : 17.5%;
+            z-index: 1003;
+            display: $f;
+            flex-direction: $co;
+            justify-content: $c;
+            align-items: $c;
+            border : 2px solid tomato;
+            padding : 3% 0%;
+            font-family: $font;
+            text-align: $c;
+            transform: translateY(-4300px);
+            transition: 1.2s;
+
+            @include d3{
+
+                width : 85%;
+                left : 7.5%;
+                height : 80%;
+                top : 10%;
+
+            }
+
+            @include d4{
+
+                padding : 6% 0%;
+
+            }
+
+            @include d5{
+
+                padding : 8% 0%;
+
+            }
+
+            @include d6{
+
+                padding : 14% 0%;
+
+            }
+
+
+            #closeAnswerPopUp{
+
+                text-decoration: none;
+                position: absolute;
+                right : 3%;
+                top : 3%;
+
+                i{
+
+                    color : tomato;
+                    font-size: 1.7em;
+
+                }
+
+            }
+
+            h4{
+
+                color : tomato;
+                line-height: 37px;
+                letter-spacing: 1.6px;
+                font-size : 1.8em;
+
+                @include d5{
+
+                    font-size : 1.3em;
+
+                }
+
+            }
+
+            textarea{
+
+                resize : none;
+                width : 90%;
+                padding : 1.5%;
+                margin : 8% 0%;
+                color : whitesmoke;
+                background-color: transparent;
+                border : 2px solid whitesmoke;
+                border-radius: 12px;
+
+                @include d5{
+
+                    padding : 3%;
+
+                }
+
+                &::placeholder{
+
+                    color : whitesmoke;
+
+                }
+
+            }
+
+            #commentAnswerErrorPar{
+
+                color : tomato;
+                font-size : 1.2em;
+                letter-spacing: 1.2px;
+                padding-bottom: 4%;
+                display: none;
+
+            }
+
+            #answerCommentButton{
+
+                width : 50%;
+                background-color: tomato;
+                color : whitesmoke;
+                line-height: 3em;
+                border-radius: 6px;
+                border : none;
+                outline: none;
+                transition: .6s;
+
+                @include d4{
+
+                    width : 65%;
+
+                }
+
+                @include d6{
+
+                    width : 80%;
+                    margin-top: 5%;
+
+                }
+
+                &:hover{
+
+                    color : tomato;
+                    background-color: whitesmoke;
+
+                }
+
+            }
+
+        }
+
+        .blockAnswerComment1{
+
+            transform: translateY(0px) !important;
+
+        }
+
+        // Transformacije klijenata
+
+        .klijentiMain{
+
+            width : 100%;
+            padding : 0px;
+            height: 100vh;
+            background-image: url('../images/clientsBackground2.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: $c;
+            background-repeat: no-repeat;
+            font-family: $font;
+
+            .faderKlijentiMain{
+
+                width : 100%;
+                height : 100%;
+                background-color: rgba(0, 0, 0, 0.7);
+                display: $f;
+                justify-content: $c;
+                align-items: $c;
+
+                h1{
+
+                    color : whitesmoke;
+                    text-shadow: 2px 2px #000;
+                    font-size : 3em;
+                    letter-spacing: 1.2px;
+                    text-align: $c;
+
+                    @include d4{
+
+                        font-size: 2.5em;
+
+                    }
+
+                    @include d5{
+
+                        font-size: 2em;
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        .slikeTransformacija{
+
+            width : 100%;
+            transform: translateY(-17%);
+            padding : .5% 0%;
+
+            @include d3{
+
+                transform: translateY(-14%);
+
+            }
+
+            @include d5{
+
+                transform: translateY(-6%);
+
+            }
+
+            @include d6{
+
+                transform: translateY(-7%); 
+
+            }
+
+            .straneTransformacija{
+
+                width : 100%;
+                display: $f;
+                justify-content: $c;
+                align-items: $c;
+                margin : 5% 0%;
+
+                @include d4{
+
+                    margin : 8% 0%;
+
+                }
+
+                .paginacijaBrojevi{
+
+                    text-decoration: none;
+                    width : 50px;
+                    height : 50px;
+                    background-color: whitesmoke;
+                    color : tomato;
+                    border-radius: 50%;
+                    display: $f;
+                    justify-content: $c;
+                    align-items: $c;
+                    margin: 0% .5%;
+                    font-weight: bold;
+                    transition: .5s;
+
+                    @include d3{
+
+                        margin : 0% 1.5%;
+
+                    }
+
+                    @include d5{
+
+                        margin : 0% 2.5%;
+
+                    }
+
+                    &:hover{
+
+                        color : whitesmoke;
+                        background-color: tomato;
+
+                    }
+
+                }
+
+            }
+
+            .transformationPicsRow{
+
+                width : 90%;
+                margin: 0px auto;
+                display: $f;
+                flex-wrap: $fw;
+                justify-content: $sa;
+                align-items: $c;
+
+                .transformationPictureBox{
+
+                    width : 26%;
+                    display: $f;
+                    justify-content: $c;
+                    align-items: $c;
+                    margin : 3% 0%;
+                    transition: .6s;
+
+                    @include d3{
+
+                        width : 35%;
+
+                    }
+
+                    @include d5{
+
+                        width : 80%;
+                        margin : 5% 0%;
+
+                    }
+
+                    &:hover{
+
+                        box-shadow: 2px 0px 30px 1px tomato;
+
+                    }
+
+                    img{
+
+                        max-width: 100%;
+                        width : 100%;
+                        height: auto;
+                        border-radius: 6px;
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        // login.html
+
+        .loginRegisterBlock{
+
+            width: 100%;
+            padding: 22% 0% 5% 0%;
+            display: $f;
+            flex-direction: $co;
+            justify-content: $c;
+            align-items: $c;
+            text-align: $c;
+            font-family: $font;
+
+            @include d5{
+
+                padding : 28% 0% 10% 0%;
+
+            }
+
+            h2{
+
+                background: linear-gradient(308deg, #e85d46, #f24124, #f55238, #f3600c, #ca4033, tomato);
+                background-size: 800% 800%;
+                animation: gradientTomato 4s ease infinite;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-size: 2em;
+                padding-bottom: 3%;
+                letter-spacing: 1.5px;
+
+            }
+
+            .loginField{
+
+                width : 30%;
+                background-color: transparent;
+                border : 2px solid orangered;
+                border-radius: 6px;
+                padding : .5%;
+                color : whitesmoke;
+                margin: 1.3% 0%;
+
+                @include d2{
+
+                    width : 40%;
+
+                }
+
+                @include d3{
+
+                    width : 65%;
+                    margin : 1.7% 0%;
+                    padding : 1%;
+
+                }
+
+                @include d5{
+
+                    width : 70%;
+                    margin: 3% 0%;
+
+                }
+
+                &::placeholder{
+
+                    color : whitesmoke;
+
+                }
+
+            }
+
+            .loginErrorPar{
+
+                color : tomato;
+                text-align: $c;
+                padding-top: .5%;
+                letter-spacing: 1.2px;
+                font-size: 1.05em;
+                display: none;
+
+                @include d5{
+
+                    font-size: 1em;
+
+                }
+
+            }
+
+            .buttonLoginRegister{
+
+                background-color: transparent;
+                width : 20%;
+                border-radius: 6px;
+                margin-top: 2%;
+                background-color: tomato;
+                color : whitesmoke;
+                border : 2px solid tomato;
+                line-height: 3em;
+                letter-spacing: 1.2px;
+                transition: .6s;
+                outline: none;
+
+                @include d2{
+
+                    width : 30%;
+                    margin-top: 3%;
+
+                }
+
+                @include d3{
+
+                    width : 40%;
+
+                }
+
+                @include d5{
+
+                    width : 50%;
+                    margin-top: 5%;
+
+                }
+
+                &:hover{
+
+                    color : tomato;
+                    background-color: whitesmoke;
+                    border-color : whitesmoke;
+
+                }
+
+            }
+
+        }
+
+        // Planovi
+
+        .planovi{
+
+            width : 100%;
+            font-family: $font;
+            padding : 20% 0% 15% 0%;
+            background-color: lighten(#141414, 2%);
+
+            @include d5{
+
+                padding-top : 35%;
+
+            }
+
+            .rowPlanovi{
+
+                display: $f;
+
+                .formaPlanovi{
+
+                    display: $f;
+                    flex-direction: $co;
+                    justify-content: $c;
+                    align-items: $c;
+                    text-align: $c;
+
+                    .buyPlanField{
+
+                        width : 80%;
+                        resize: none;
+                        border-radius: 7px;
+                        border : 2px solid tomato;
+                        color : whitesmoke;
+                        padding : 1.5%;
+                        background-color: transparent;
+                        margin : 2% 0%;
+
+                        @include d4{
+
+                            width : 90%;
+                            margin : 4% 0%;
+
+                        }
+
+                        @include d6{
+
+                            width : 95%;
+
+                        }
+
+                        option{
+
+                            background-color: #141414;
+
+                        }
+
+                        &::placeholder{
+
+                            color : whitesmoke;
+
+                        }
+
+                    }
+
+                    .buyPlanErrorPar{
+
+                        color : tomato;
+                        letter-spacing: 1.4px;
+                        padding: 2% 4%;
+                        font-size : 1.1em;
+                        display: none;
+
+                    }
+
+                    #buyPlanButton{
+
+                        width : 40%;
+                        line-height: 3em;
+                        background-color: tomato;
+                        color : whitesmoke;
+                        border : none;
+                        border-radius: 6px;
+                        transition: .6s;
+                        margin : 4% 0%;
+
+                        @include d3{
+
+                            width : 55%;
+
+                        }
+
+                        @include d4{
+
+                            margin-top: 7%;
+
+                        }
+
+                        @include d5{
+
+                            width : 70%;
+
+                        }
+
+                        @include d6{
+
+                            width : 80%;
+                            margin : 10% 0%;
+
+                        }
+
+                        &:hover{
+
+                            color : tomato;
+                            background-color: whitesmoke;
+
+                        }
+
+                    }
+
+                    .poslePopunjeneFormePlana{
+
+                        padding : 3%;
+                        text-align: $c;
+                        display: none;
+
+                        p{
+
+                            font-size : 1.1em;
+                            padding : 2% 0%;
+
+                        }
+
+                        #uspesnoKupljeno{
+
+                            color : #46d846;
+                            font-size : 1.4em;
+
+                        }
+
+                        #napomenaZaUplatu{
+
+                            text-transform: uppercase;
+                            color : whitesmoke;
+
+                        }
+
+                        #moratePoslatiSliku{
+
+                            color : tomato;
+                            text-shadow: 1.4px 1.4px black;
+                            font-size : 1.3em;
+
+                        }
+
+                        .postNetUplata{
+
+                            color : whitesmoke;
+                            margin-top : 5%;
+                            background-color: lighten(#141414, 9%);
+                            padding : 5% 0%;
+                            display: none;
+
+                            h3{
+
+                                padding-bottom: 2%;
+
+                            }
+
+                            p{
+
+                                padding : 1% 0%;
+                                margin : 0px;
+                                font-size : 1.2em;
+                                letter-spacing: 2.2px;
+
+                                @include d5{
+
+                                    padding : 4% 0%;
+
+                                }
+
+                            }
+
+                        }
+
+                        .eBankingUplata{
+
+                            color : whitesmoke;
+                            display: $f;
+                            justify-content: $c;
+                            align-items: $c;
+                            flex-direction: $co;
+                            margin-top : 5%;
+                            padding : 5% 0%;
+                            background-color: lighten(#141414, 9%);
+                            display: none;
+
+                            h3{
+
+                                padding-bottom: 4%;
+
+                            }
+
+                            .eBankingSlikaDiv{
+
+                                width : 40%;
+                                display: block;
+                                margin : 0px auto !important;
+
+                                @include d2{
+
+                                    width : 55%;
+
+                                }
+
+                                @include d3{
+
+                                    width : 70%;
+
+                                }
+
+                                @include d6{
+
+                                    width : 90%;
+
+                                }
+
+                                img{
+
+                                    max-width: 100%;
+                                    height: auto;
+
+                                }
+
+                            }
+
+                        }
+
+                        .paypalUplata{
+
+                            margin-top: 5%;
+                            padding : 5% 0%;
+                            background-color: lighten(#141414, 9%);
+                            display: none;
+                            
+                            h3{
+
+                                color : whitesmoke;
+                                padding-bottom: 4%;
+                                letter-spacing: 2px;
+                                font-size : 1.7em;
+
+                                @include d4{
+
+                                    font-size : 1.5em;
+
+                                }
+
+                            }
+
+                            #payPalDugme{
+
+                                width : 40%;
+                                line-height: 3em;
+
+                                @include d5{
+
+                                    width : 60%;
+                                    margin-top: 4%;
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+                .planKojiSeKupuje{
+
+                    display: $f;
+                    flex-direction: $co;
+                    align-items: $c;
+                    margin-bottom: 5%;
+
+                    h3{
+
+                        color : whitesmoke;
+                        font-size : 2.5em;
+                        padding-bottom: 3%;
+
+                        @include d3{
+
+                            font-size: 2em;
+
+                        }
+
+                        @include d6{
+
+                            font-size : 1.6em;
+
+                        }
+
+                    }
+
+                    img{
+
+                        width : 30%;
+
+                        @include d6{
+
+                            width : 50%;
+
+                        }
+
+                    }
+
+                    h4{
+
+                        color : tomato;
+                        padding-top: 1.5%;
+                        font-size : 2.1em;
+
+                        @include d2{
+
+                            font-size : 1.8em;
+
+                        }
+
+                        @include d5{
+
+                            padding-top: 4%;
+
+                        }
+
+                        @include d6{
+
+                            font-size : 1.5em;
+
+                        }
+
+                    }
+
+                    p{
+
+                        color : whitesmoke;
+                        font-size : 1.5em;
+                        color : orange;
+
+                        @include d6{
+
+                            font-size : 1.3em;
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+    .vert{
+
+        overflow-y: auto;
+
+    }
+
+}
+
+// Selection
+
+::selection {
+    color: tomato;
+    background: tomato;
+  }
+
+// Animacije
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 tomato; }
+  }
+
+@keyframes showMe{
+
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+
+}
+
+@keyframes gradientTomato {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 51%}
+    100%{background-position:0% 50%}
+}
+
+// Skroler
+
+/* width */
+::-webkit-scrollbar {
+    width: 12px;
+    border-radius: 6px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: lighten(#141414, 5%);
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: tomato;
+    border-radius: 6px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: lighten(tomato, 5%);
+  }

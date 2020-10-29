@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "imePlana": "Plan Ishrane",
+        "cena": 30,
+        "slika": "planIshrane.jpg",
+        "specialPlan": false
+    },
+    {
+        "id": 2,
+        "imePlana": "Trening + Ishrana",
+        "cena": 40,
+        "slika": "",
+        "specialPlan": true
+    },
+    {
+        "id": 3,
+        "imePlana": "Plan Treninga",
+        "cena": 35,
+        "slika": "planTreninga.jpg",
+        "specialPlan": false
+    }
+]
