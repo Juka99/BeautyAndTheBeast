@@ -241,7 +241,7 @@ html{
             width: 100%;
             height: 100vh;
             position: fixed;
-            z-index: 1007 !important;
+            z-index: 1100 !important;
             display: $f;
             justify-content: $c;
             align-items: $c;
@@ -396,7 +396,7 @@ html{
         #triggerSideNav{
 
             position: fixed;
-            z-index: 1005;
+            z-index: 1031;
             top: 3%;
             left: 5%;
             font-size: 2em;
@@ -440,7 +440,7 @@ html{
             bottom: 0%;
             width : 100%;
             background-color: #141414;
-            z-index: 1004;
+            z-index: 1030;
             display: $f;
             flex-direction: $co;
             justify-content: $sa;
@@ -3141,6 +3141,327 @@ html{
                     }
 
                 }
+
+            }
+
+        }
+
+        .formaUplateBlock{
+
+            width : 100%;
+            background-color: lighten(#141414, 3%);
+            margin : 22% 0% 10% 0%;
+            font-family: $font;
+            text-align: $c;
+            padding : 3% 0%;
+
+            @include d3{
+
+                margin : 29% 0% 10% 0%;
+
+            }
+
+            @include d4{
+
+                margin : 33% 0% 10% 0%;
+                padding : 5% 0%;
+
+            }
+
+            @include d5{
+
+                padding : 5% 3%;
+                margin : 37% 0% 10% 0%;
+
+            }
+
+            @include d6{
+
+                margin : 45% 0% 15% 0%;
+
+            }
+
+            h1{
+
+                color : orange;
+                letter-spacing: 1.3px;
+                
+                @include d2{
+
+                    font-size : 2.2em;
+
+                }
+
+                @include d5{
+
+                    font-size : 1.8em;
+
+                }
+
+            }
+
+            p{
+
+                padding-top : 1%;
+                color : whitesmoke;
+                text-shadow: 1.2px 1.2px black;
+
+            }
+
+            .formaZaSlanjePotvrdeUplate{
+
+                padding : 2% 0%;
+                display: $f;
+                flex-direction: $co;
+                justify-content: $c;
+                align-items: $c;
+
+                @include d3{
+
+                    padding : 5% 0%;
+
+                }
+
+                @include d5{
+
+                    padding : 7% 0%;
+
+                }
+
+                #fileInputFieldPayment{
+
+                    color : tomato;
+                    padding-bottom: 2.5%;
+                    margin : 0px auto;
+
+                    @include d5{
+
+                        padding-bottom: 5%;
+
+                    }
+
+                }
+
+                #paymentFileTypeErrorPar{
+
+                    color : tomato;
+                    padding-top: 1%;
+                    font-size: 1.3em;
+                    display: none;
+
+                    @include d5{
+
+                        font-size : 1.1em;
+
+                    }
+
+                }
+
+                #buttonPaymentImageSent{
+
+                    margin-top: 3.5%;
+                    width : 30%;
+                    background-color: tomato;
+                    color : whitesmoke;
+                    border : none;
+                    border-radius: 12px;
+                    line-height: 3em;
+                    transition: .6s;
+
+                    @include d2{
+
+                        width : 40%;
+    
+                    }
+
+                    @include d3{
+
+                        width : 50%;
+
+                    }
+
+                    @include d5{
+
+                        width : 70%;
+
+                    }
+
+                    @include d6{
+
+                        width : 80%;
+
+                    }
+
+                    &:hover{
+
+                        background-color: whitesmoke;
+                        color : tomato;
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        // PODSETNIK ZA UPLATE
+
+        .podsetnikZaUplatu{
+
+            position: fixed;
+            width : 70%;
+            height : 40%;
+            background-color: black;
+            border-radius: 12px;
+            border : 2px solid tomato;
+            z-index: 1009;
+            left : 15%;
+            font-family: $font;
+            top : 30%;
+            display: $f;
+            align-items: $c;
+            justify-content: $sa;
+            flex-direction: $co;
+            transition: 1s;
+            transform: translateY(-3000px);
+
+            @include d3{
+
+                width : 90%;
+                height : 90%;
+                top : 5%;
+                left : 5%;
+
+            }
+
+            p{
+
+                color : whitesmoke;
+                font-size : 1.3em;
+                text-align: $c;
+                padding : 0% 3%;
+
+            }
+
+            #closeReminder{
+
+                position: absolute;
+                right : 4%;
+                top : 5%;
+
+                i{
+
+                    color : tomato;
+                    font-size: 1.6em;
+
+                }
+
+            }
+
+            #linkKaSlanjuPlacanja{
+
+                width : 40%;
+                background-color: tomato;
+                color : whitesmoke;
+                transition: .7s;
+                text-align: $c;
+                line-height: 3em;
+                text-decoration: none;
+                border-radius: 12px;
+
+                @include d2{
+
+                    width : 60%;
+
+                }
+
+                @include d5{
+
+                    width : 80%;
+
+                }
+
+
+                &:hover{
+
+                    background-color: whitesmoke;
+                    color : tomato;
+
+                }
+
+            }
+            
+        }
+
+        .podsetnikZaUplatu1{
+
+            transform: translateY(0px);
+
+        }
+
+        // Ikonica za stranicu za slanje slike sa potvrdom uplate
+
+        #rightKey1{
+
+            position: fixed;
+            right : 0;
+            top : 50%;
+            z-index: 1009;
+            width : 270px;
+            background-color: lighten(#141414, 5%);
+            display: $f;
+            justify-content: $sb;
+            padding : 1%;
+            text-decoration: none;
+            align-items: $c;
+            font-family: $font;
+            border-top-left-radius: 12px;
+            border-bottom-left-radius: 12px;
+            transform: translateX(80%);
+            transition: .6s;
+
+            @include d2{
+
+                transform: translateX(82%);
+
+            }
+
+            @include d4{
+
+                transform: translateX(84%);
+                padding : 2%;
+
+            }
+
+            &:hover{
+
+                transform: translateX(0%); 
+
+            }
+
+            &:hover > i{
+
+                color : tomato;
+
+            }
+
+            p{
+
+                margin: 0px;
+                color : tomato;
+                letter-spacing: 1.2px;
+                width : 80%;
+                text-align: $c;
+
+            }
+
+            i{
+
+                color : whitesmoke;
+                font-size : 1.4em;
+                transition: .6s;
+                width : 20%;
 
             }
 

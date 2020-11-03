@@ -141,7 +141,7 @@ html body .preloader {
   width: 100%;
   height: 100vh;
   position: fixed;
-  z-index: 1007 !important;
+  z-index: 1100 !important;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -299,7 +299,7 @@ html body nav .menuNav .mainMenu li a:hover {
 
 html body #triggerSideNav {
   position: fixed;
-  z-index: 1005;
+  z-index: 1031;
   top: 3%;
   left: 5%;
   font-size: 2em;
@@ -336,7 +336,7 @@ html body .sideNav {
   bottom: 0%;
   width: 100%;
   background-color: #141414;
-  z-index: 1004;
+  z-index: 1030;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3052,6 +3052,316 @@ html body .planovi .rowPlanovi .planKojiSeKupuje p {
   html body .planovi .rowPlanovi .planKojiSeKupuje p {
     font-size: 1.3em;
   }
+}
+
+html body .formaUplateBlock {
+  width: 100%;
+  background-color: #1c1c1c;
+  margin: 22% 0% 10% 0%;
+  font-family: "Work Sans", sans-serif;
+  text-align: center;
+  padding: 3% 0%;
+}
+
+@media (max-width: 768px) {
+  html body .formaUplateBlock {
+    margin: 29% 0% 10% 0%;
+  }
+}
+
+@media (max-width: 576px) {
+  html body .formaUplateBlock {
+    margin: 33% 0% 10% 0%;
+    padding: 5% 0%;
+  }
+}
+
+@media (max-width: 480px) {
+  html body .formaUplateBlock {
+    padding: 5% 3%;
+    margin: 37% 0% 10% 0%;
+  }
+}
+
+@media (max-width: 386px) {
+  html body .formaUplateBlock {
+    margin: 45% 0% 15% 0%;
+  }
+}
+
+html body .formaUplateBlock h1 {
+  color: orange;
+  letter-spacing: 1.3px;
+}
+
+@media (max-width: 992px) {
+  html body .formaUplateBlock h1 {
+    font-size: 2.2em;
+  }
+}
+
+@media (max-width: 480px) {
+  html body .formaUplateBlock h1 {
+    font-size: 1.8em;
+  }
+}
+
+html body .formaUplateBlock p {
+  padding-top: 1%;
+  color: whitesmoke;
+  text-shadow: 1.2px 1.2px black;
+}
+
+html body .formaUplateBlock .formaZaSlanjePotvrdeUplate {
+  padding: 2% 0%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 768px) {
+  html body .formaUplateBlock .formaZaSlanjePotvrdeUplate {
+    padding: 5% 0%;
+  }
+}
+
+@media (max-width: 480px) {
+  html body .formaUplateBlock .formaZaSlanjePotvrdeUplate {
+    padding: 7% 0%;
+  }
+}
+
+html body .formaUplateBlock .formaZaSlanjePotvrdeUplate #fileInputFieldPayment {
+  color: tomato;
+  padding-bottom: 2.5%;
+  margin: 0px auto;
+}
+
+@media (max-width: 480px) {
+  html body .formaUplateBlock .formaZaSlanjePotvrdeUplate #fileInputFieldPayment {
+    padding-bottom: 5%;
+  }
+}
+
+html body .formaUplateBlock .formaZaSlanjePotvrdeUplate #paymentFileTypeErrorPar {
+  color: tomato;
+  padding-top: 1%;
+  font-size: 1.3em;
+  display: none;
+}
+
+@media (max-width: 480px) {
+  html body .formaUplateBlock .formaZaSlanjePotvrdeUplate #paymentFileTypeErrorPar {
+    font-size: 1.1em;
+  }
+}
+
+html body .formaUplateBlock .formaZaSlanjePotvrdeUplate #buttonPaymentImageSent {
+  margin-top: 3.5%;
+  width: 30%;
+  background-color: tomato;
+  color: whitesmoke;
+  border: none;
+  border-radius: 12px;
+  line-height: 3em;
+  -webkit-transition: .6s;
+  transition: .6s;
+}
+
+@media (max-width: 992px) {
+  html body .formaUplateBlock .formaZaSlanjePotvrdeUplate #buttonPaymentImageSent {
+    width: 40%;
+  }
+}
+
+@media (max-width: 768px) {
+  html body .formaUplateBlock .formaZaSlanjePotvrdeUplate #buttonPaymentImageSent {
+    width: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  html body .formaUplateBlock .formaZaSlanjePotvrdeUplate #buttonPaymentImageSent {
+    width: 70%;
+  }
+}
+
+@media (max-width: 386px) {
+  html body .formaUplateBlock .formaZaSlanjePotvrdeUplate #buttonPaymentImageSent {
+    width: 80%;
+  }
+}
+
+html body .formaUplateBlock .formaZaSlanjePotvrdeUplate #buttonPaymentImageSent:hover {
+  background-color: whitesmoke;
+  color: tomato;
+}
+
+html body .podsetnikZaUplatu {
+  position: fixed;
+  width: 70%;
+  height: 40%;
+  background-color: black;
+  border-radius: 12px;
+  border: 2px solid tomato;
+  z-index: 1009;
+  left: 15%;
+  font-family: "Work Sans", sans-serif;
+  top: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transform: translateY(-3000px);
+          transform: translateY(-3000px);
+}
+
+@media (max-width: 768px) {
+  html body .podsetnikZaUplatu {
+    width: 90%;
+    height: 90%;
+    top: 5%;
+    left: 5%;
+  }
+}
+
+html body .podsetnikZaUplatu p {
+  color: whitesmoke;
+  font-size: 1.3em;
+  text-align: center;
+  padding: 0% 3%;
+}
+
+html body .podsetnikZaUplatu #closeReminder {
+  position: absolute;
+  right: 4%;
+  top: 5%;
+}
+
+html body .podsetnikZaUplatu #closeReminder i {
+  color: tomato;
+  font-size: 1.6em;
+}
+
+html body .podsetnikZaUplatu #linkKaSlanjuPlacanja {
+  width: 40%;
+  background-color: tomato;
+  color: whitesmoke;
+  -webkit-transition: .7s;
+  transition: .7s;
+  text-align: center;
+  line-height: 3em;
+  text-decoration: none;
+  border-radius: 12px;
+}
+
+@media (max-width: 992px) {
+  html body .podsetnikZaUplatu #linkKaSlanjuPlacanja {
+    width: 60%;
+  }
+}
+
+@media (max-width: 480px) {
+  html body .podsetnikZaUplatu #linkKaSlanjuPlacanja {
+    width: 80%;
+  }
+}
+
+html body .podsetnikZaUplatu #linkKaSlanjuPlacanja:hover {
+  background-color: whitesmoke;
+  color: tomato;
+}
+
+html body .podsetnikZaUplatu1 {
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
+html body #rightKey1 {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  z-index: 1009;
+  width: 270px;
+  background-color: #212121;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1%;
+  text-decoration: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Work Sans", sans-serif;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  -webkit-transform: translateX(80%);
+          transform: translateX(80%);
+  -webkit-transition: .6s;
+  transition: .6s;
+}
+
+@media (max-width: 992px) {
+  html body #rightKey1 {
+    -webkit-transform: translateX(82%);
+            transform: translateX(82%);
+  }
+}
+
+@media (max-width: 576px) {
+  html body #rightKey1 {
+    -webkit-transform: translateX(84%);
+            transform: translateX(84%);
+    padding: 2%;
+  }
+}
+
+html body #rightKey1:hover {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+html body #rightKey1:hover > i {
+  color: tomato;
+}
+
+html body #rightKey1 p {
+  margin: 0px;
+  color: tomato;
+  letter-spacing: 1.2px;
+  width: 80%;
+  text-align: center;
+}
+
+html body #rightKey1 i {
+  color: whitesmoke;
+  font-size: 1.4em;
+  -webkit-transition: .6s;
+  transition: .6s;
+  width: 20%;
 }
 
 html .vert {

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Fa-fa icons -->
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
+
+    <!-- Font -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap" rel="stylesheet">
+
+    <!-- Icon -->
+
+    <link rel="icon" href="assets/images/milosLogo.png" />
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <title>Beauty And The Beast</title>
+
+</head>
+
+<body>
+
+    <!-- Go to top strelica -->
+
+    <a href="#!" class='goTop'>
+
+        <i class="fas fa-chevron-up"></i>
+
+    </a>
+
+    <!-- Youtube button -->
+
+    <a href="https://www.youtube.com/channel/UC-QIbqxqc3HUu2piUkplyyw" target="_blank" class='ytButton'><i
+            class="fab fa-youtube"></i></a>
+
+    <!-- Preload -->
+
+    <div class="preloader">
+
+        <video id='playMeNow' src="assets/videos/preloadVideoNew.mp4" autoplay muted
+            onloadedmetadata="this.muted = true" playsinline>
+
+            <!-- <source src="assets/videos/preloadVideoNew.mp4" type="video/mp4" /> -->
+            <!-- <source src="assets/videos/preloadVideo.ogg" type="video/ogg" />
+            <source src="assets/videos/preloadVideo.webm" type="video/webm" /> -->
+            <!-- Your browser does not support the video tag. -->
+
+        </video>
+
+        <script>
+            document.getElementById('playMeNow').play();
+        </script>
+
+    </div>
+
+    <!-- Login/Register -->
+
+    <div class="loginRegister">
+
+        <p><a href="login.html">Uloguj Se</a> / <a href="register.html">Registruj Se</a></p>
+
+    </div>
+
+    <!-- Main navigacija -->
+
+    <nav>
+
+        <div class="logoNav allLogos">
+
+        </div>
+
+        <div class="menuNav">
+
+            <ul class='menu mainMenu'>
+
+
+            </ul>
+
+        </div>
+
+    </nav>
+
+    <!-- Side navigacija trigger -->
+
+    <a href="#!" id='triggerSideNav'><i class="fa fa-bars" aria-hidden="true"></i></a>
+
+    <!-- Side navigacija -->
+
+    <div class="sideNav">
+
+        <ul class="menu sideMenu"></ul>
+
+        <div class="allLogos logoSideNav"></div>
+
+    </div>
+
+    <!-- Forma za slanje slike placanja -->
+
+    <div class="formaUplateBlock">
+
+        <h1>Potvrda o uplati plana</h1>
+        <p>Molim Vas da ostavite sliku o potvrdi plaćanja u prilogu ispod da bi završili Vašu kupovinu</p>
+
+        <div class="formaZaSlanjePotvrdeUplate">
+
+            <input type="file" required="required" id='fileInputFieldPayment' />
+
+            <p id="paymentFileTypeErrorPar">Niste priložili sliku uplate.</p>
+
+            <button id="buttonPaymentImageSent">Pošaljite sliku</button>
+
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+
+    <footer class='container-fluid'>
+
+        <div class="row rowFooter">
+
+            <div class="col-lg-4 colSocialsFooter">
+
+                <div class="socialsFooter">
+
+                    <p>Pratite me :</p>
+
+                    <div class="socialsIcons">
+
+                        <a href="https://www.instagram.com/milos_premcevic/" id='igIcon' target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+
+                        <a href="https://www.youtube.com/channel/UC-QIbqxqc3HUu2piUkplyyw" target="_blank"><i
+                                class="fab fa-youtube"></i></a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4 colSocialsNav">
+
+                <p>Navigacija</p>
+
+                <div class="footerNav">
+
+                    <ul class='menu footerMenu'>
+
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4 colLogoFooter">
+
+                <div class="logoFooter">
+
+                    <div class="allLogos">
+
+                    </div>
+
+                    <p>Copyright &copy; 2020 Beauty And The Beast. <br />All rights reserved.</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- jQuery -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+    <!-- Bootstrap -->
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- JS fajlovi -->
+
+    <script src="assets/js/nav.js"></script>
+    <script src="assets/js/preloader.js"></script>
+    <script src="assets/js/planPaymentForm.js"></script>
+
+</body>
+
+</html>
