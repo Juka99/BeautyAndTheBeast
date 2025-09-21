@@ -1,27 +1,459 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <title>Vite + Vue</title>
-    <script type="module" crossorigin src="./assets/index-24WYdEb_.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-BsuKbTtT.css">
-  </head>
-  <body>
-    <div id="app"></div>
-  </body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Fa-fa icons -->
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
+
+    <!-- Font -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap" rel="stylesheet">
+
+    <!-- Icon -->
+
+    <link rel="icon" href="assets/images/milosLogo.png" />
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <title>Beauty And The Beast</title>
+
+</head>
+
+<body>
+
+    <!-- Login/Register -->
+
+    <div class="loginRegister">
+
+        <p><a href="login.html">Uloguj Se</a> / <a href="register.html">Registruj Se</a></p>
+
+    </div>
+
+    <!-- Main navigacija -->
+
+    <nav>
+
+        <div class="logoNav allLogos">
+
+        </div>
+
+        <div class="menuNav">
+
+            <ul class='menu mainMenu'>
+
+
+            </ul>
+
+        </div>
+
+    </nav>
+
+    <!-- Side navigacija trigger -->
+
+    <a href="#!" id='triggerSideNav'><i class="fa fa-bars" aria-hidden="true"></i></a>
+
+    <!-- Side navigacija -->
+
+    <div class="sideNav">
+
+        <ul class="menu sideMenu"></ul>
+
+        <div class="allLogos logoSideNav"></div>
+
+    </div>
+
+    <!-- Preload -->
+
+    <div class="preloader">
+
+        <video id='playMeNow' src="assets/videos/preloadVideoNew.mp4" autoplay muted
+            onloadedmetadata="this.muted = true" playsinline>
+
+            <!-- <source src="assets/videos/preloadVideoNew.mp4" type="video/mp4" /> -->
+            <!-- <source src="assets/videos/preloadVideo.ogg" type="video/ogg" />
+        <source src="assets/videos/preloadVideo.webm" type="video/webm" /> -->
+            <!-- Your browser does not support the video tag. -->
+
+        </video>
+
+        <script>
+            document.getElementById('playMeNow').play();
+        </script>
+
+    </div>
+
+    <!-- Go to top strelica -->
+
+    <a href="#!" class='goTop'>
+
+        <i class="fas fa-chevron-up"></i>
+
+    </a>
+
+    <!-- Youtube button -->
+
+    <a href="https://www.youtube.com/channel/UC-QIbqxqc3HUu2piUkplyyw" target="_blank" class='ytButton'><i
+            class="fab fa-youtube"></i></a>
+
+    <!-- Blok podsetnik -->
+
+    <div class="podsetnikZaUplatu">
+
+        <p id='parPlanSlanje'>Vaš plan je skoro tu ! <br /> Pošaljite sliku Vaše uplate plana klikom na dugme ispod da
+            bi ste završili proces !</p>
+
+        <a href="#!" id='closeReminder'><i class="fas fa-times"></i></a>
+
+        <a href="paymentImage.html" id='linkKaSlanjuPlacanja'>Kliknite ovde !</a>
+
+    </div>
+
+    <!-- Fotoaparat slanje -->
+
+    <a href="paymentImage.html" id='rightKey1'>
+
+        <i class="fa fa-camera"></i>
+
+        <p>Pošaljite sliku uplate</p>
+
+    </a>
+
+    <!-- Main sekcija -->
+
+    <main id='goTopMain'>
+
+        <div class="fader">
+
+            <div class="container infoMain">
+
+                <div class="infoBlock">
+
+                    <img src="assets/images/milosLogo.png" class='img-fluid' alt="Logo" />
+
+                    <a href="#goTopKoSamJa">Vreme je za promenu</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Ko sam ja sekcija -->
+
+    <section class="container-fluid koSamJa specialSection" id="goTopKoSamJa">
+
+        <div class="row rowKoSamJa rowSpec">
+
+            <div class="col-lg-6 colKoSamJa1">
+
+                <div class="koSamJaInfo">
+
+                    <h2>Ko Sam Ja ? </h2>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quae numquam, animi itaque
+                        ullam
+                        hic
+                        eos sed vitae accusantium minima qui magnam. Libero consequuntur eum amet, beatae dolorem
+                        eos
+                        aut.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam iusto est esse nobis cum quia
+                        cupiditate alias, beatae magni aperiam ipsa eveniet ratione earum magnam expedita officiis
+                        corporis
+                        quam sapiente.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-6 colKoSamJa2">
+
+                <div class="koSamJaSlika">
+
+                    <img src="assets/images/milosPremcevicPictureOne.jpg" class='img-fluid' alt="Milos Premcevic" />
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Zasto bas ja sekcija -->
+
+    <section class="container-fluid zastoBasJa specialSection" id='goTopZastoBasJa'>
+
+        <div class="row rowZastoBasJa rowSpec">
+
+            <div class="col-lg-6 colZastoBasJa1">
+
+                <video id='videoZastoBasJa' autoplay muted src="assets/videos/workoutVideoNew.mp4" loop
+                    playsinline></video>
+
+            </div>
+
+            <div class="col-lg-6 colZastoBasJa2 colKoSamJa1">
+
+                <div class="zastoBasJaInfo koSamJaInfo">
+
+                    <h2>Zašto Baš Ja ?</h2>
+
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos, odio doloremque perferendis
+                        qui
+                        ut iste illum vero recusandae ipsa, molestiae earum veritatis quae illo ratione sint
+                        excepturi
+                        consequatur a repellendus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam
+                        blanditiis ratione culpa enim voluptatum voluptatibus. Voluptatum at, veritatis sed tempore
+                        iure
+                        amet, minima numquam cupiditate voluptatem cum accusamus aspernatur voluptatibus?</p>
+
+                    <a href="#!" id='rezultatiKlijenata'>Rezultati Klijenata</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Planovi -->
+
+    <section class="container-fluid plans" id='goTopPlans'>
+
+        <h2>Planovi</h2>
+
+        <p>Morate se ulogovati da bi mogli da naručite plan</p>
+
+        <div class="plansCont container">
+
+            <div class="row rowPlans">
+
+                <!-- <div class="col-lg-4 colPlanIshrane">
+
+                    <div class="planBox planIshrane">
+
+                        <div class="planPictureHolder">
+
+                            <img src="assets/images/planIshrane.jpg" class='img-fluid' alt="Plan Ishrane" />
+
+                        </div>
+
+                        <div class="aboutPlan">
+
+                            <h3>Plan Ishrane</h3>
+
+                            <p>Cena plana<br><span>30&euro;</span></p>
+
+                            <a href="#!" class='orderPlanButton'>Naruči Plan</a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-4 colPlanIshrane colSpecialPlan">
+
+                    <h3>BEST SELLER</h3>
+
+                    <div class="planBox planIshraneITreninga">
+
+                        <div class="planPictureHolder">
+
+                            <img src="assets/images/planIshrane.jpg" class='img-fluid' alt="Plan Ishrane" />
+
+                        </div>
+
+                        <div class="aboutPlan">
+
+                            <h3>Trening<br>+<br>Ishrana</h3>
+
+                            <p>Cena plana<br><span>40&euro;</span></p>
+
+                            <a href="#!" class='orderPlanButton'>Naruči Plan</a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-4 colPlanIshrane colPlanTreninga">
+
+                    <div class="planBox planTreninga">
+
+                        <div class="aboutPlan">
+
+                            <h3>Plan Treninga</h3>
+
+                            <p>Cena plana<br><span>35&euro;</span></p>
+
+                            <a href="#!" class='orderPlanButton'>Naruči Plan</a>
+
+                        </div>
+
+                        <div class="planPictureHolder">
+
+                            <img src="assets/images/planTreninga.jpg" class='img-fluid' alt="Plan Treninga" />
+
+                        </div>
+
+                    </div>
+
+                </div> -->
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Kontakt forma -->
+
+    <section class="contactMe container-fluid" id='goTopContact'>
+
+        <h2>Imate Pitanje ?</h2>
+
+        <div class="container contactMeContainer">
+
+            <div class="topPartContact">
+
+                <p>Kontaktirajte me putem Instagrama :</p>
+
+                <div class="instagramInfo">
+                    <p><a href="https://www.instagram.com/milos_premcevic/" id='igName'
+                            target="_blank">@milos_premcevic</a> ili kliknite na ikonicu Instagrama
+                        <a href="https://www.instagram.com/milos_premcevic/" id='igIcon' target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                    <p>
+                </div>
+
+            </div>
+
+            <p id='midPartContact'>ILI</p>
+
+            <div class="bottomPartContact">
+
+                <p>Popunite Formu</p>
+
+                <input type="text" id='imePrezimeContact' class="formField" name="fullName"
+                    placeholder="Vaše ime i prezime ..." />
+
+                <p id='firstLastNameContactError' class="contactFormErrorPar">Ime i prezime nije dobro uneto.
+                    <br>Primer
+                    pravilno unetog imena i
+                    prezimena : Jasmina Lukić, Nikola Hadzi Ristić, ...</p>
+
+                <br>
+
+                <textarea placeholder="Vaše pitanje ..." class="formField" name="questionForMilos" id="pitanjeZaMilosa"
+                    cols="30" rows="10"></textarea>
+
+                <p id='sendMessageContactError' class="contactFormErrorPar">Morate napisati barem karaktera u polju
+                    za
+                    pitanje.
+                </p>
+
+                <br>
+
+                <button id='posaljiPitanje'>Pošaljite Pitanje</button>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+
+    <footer class='container-fluid'>
+
+        <div class="row rowFooter">
+
+            <div class="col-lg-4 colSocialsFooter">
+
+                <div class="socialsFooter">
+
+                    <p>Pratite me :</p>
+
+                    <div class="socialsIcons">
+
+                        <a href="https://www.instagram.com/milos_premcevic/" id='igIcon' target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+
+                        <a href="https://www.youtube.com/channel/UC-QIbqxqc3HUu2piUkplyyw" target="_blank"><i
+                                class="fab fa-youtube"></i></a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4 colSocialsNav">
+
+                <p>Navigacija</p>
+
+                <div class="footerNav">
+
+                    <ul class='menu footerMenu'>
+
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4 colLogoFooter">
+
+                <div class="logoFooter">
+
+                    <div class="allLogos">
+
+                    </div>
+
+                    <p>Copyright &copy; 2020 Beauty And The Beast. <br />All rights reserved.</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- jQuery -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+    <!-- Bootstrap -->
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- JS fajlovi -->
+
+    <script src="assets/js/nav.js"></script>
+    <script src="assets/js/mainPage.js"></script>
+    <script src="assets/js/preloader.js"></script>
+    <script src="assets/js/paymentReminder.js"></script>
+
+</body>
+
 </html>
